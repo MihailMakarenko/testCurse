@@ -1,0 +1,31 @@
+@import "./blocks/footer";
+@import "./blocks/header";
+@import "./blocks/main";
+@import "./blocks/media";
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  // padding: 0 15px;s
+  
+  color: #0b3b3c;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px; /* 181.25% */
+  background-color: white;
+  // background-color: blue;
+  // background-color: red;
+}
+
+main{
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
