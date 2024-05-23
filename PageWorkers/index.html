@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link type="image/x-icon" href="/favicon.png" rel="shortcut icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Lab4</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/MainPage/Cursach.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <button class="lng-header-back" id="header-main-page" onclick="back()">
+          Back
+        </button>
+        <div class="central-img">
+          <svg
+            id="manula-color"
+            class="manual"
+            xmlns="http://www.w3.org/2000/svg"
+            width="176"
+            height="44"
+            viewBox="0 0 176 44"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M43.3736 5.00159L31.8604 37.1797H35.2735L38.4262 28.1712H51.2306L54.4156 37.1797H57.8287L46.3154 5.00159H43.3736ZM44.7961 9.97094L49.7834 24.0779H39.8594L44.7961 9.97254V9.97094ZM132.832 5.00159L121.318 37.1797H124.731L127.884 28.1712H140.688L143.873 37.1797H147.286L135.773 5.00159H132.832ZM134.254 9.97094L139.242 24.0779H129.317L134.254 9.97254V9.97094ZM153.346 5.00159V37.1797H172V32.9638H156.514V5.00159H153.346ZM83.3008 5.00159V30.9776L66.7412 5H63.8887V37.1797H66.9069V11.2977L83.4128 37.1797H86.319V5.00159H83.3008ZM113.891 23.0601C113.891 30.5109 110.487 33.7904 105.928 33.7904C101.369 33.7904 97.9657 30.5093 97.9657 23.0601V5H94.7979V23.0059C94.7979 33.3699 99.4 38 105.928 38C112.456 38 117.058 33.3699 117.058 23.0059V5H113.891V23.0601ZM12.9002 21.3511L2.85248 5H0V37.1797H3.01819V11.2977L12.9002 27.3143L22.7811 11.2961V37.1797H25.8004V5.00159H22.9479L12.9002 21.3511Z"
+            />
+          </svg>
+        </div>
+        <!-- <img class="central-img" src="img/MANUAL.png" alt="" /> -->
+        <!-- <div class="header-container-link header-container-link-right">
+          <div class="header-person-icon">
+            <img src="/MainPage/img/avatar.svg" alt="" />
+          </div>
+        
+        </div> -->
+      </div>
+    </header>
+
+    <main>
+      <section class="main-container-tema_h1_img">
+        <div class="content">
+          <div class="main-container-h1-text-button">
+            <h1 class="content-text-h1 lng-welcome-to-our">
+              Welcome to our friendly team
+            </h1>
+            <p class="main-content-text lng-we-are-happy">
+              We are happy to greet you. Your presence here is more than just a
+              new addition to our team. This is a testament to our continuous
+              growth and progress. We value care and dedication to our patients.
+              We believe that each of us plays an important role in achieving
+              our shared mission of providing the best service and health care
+              to our customers. We know you will bring unique contributions to
+              our work. Your experience, knowledge and enthusiasm will be a
+              valuable addition to our team. We look forward to learning more
+              about you and your contributions to our work. Thank you for
+              joining us. Let's make the world healthier together!
+            </p>
+          </div>
+
+          <img
+            src="images/farma.jpg"
+            class="main-img-first"
+            alt="тут должна быть картинка"
+          />
+        </div>
+
+        <div class="main-icon-flex-container">
+          <div class="main-icon-inner">
+            <img class="main-img-person" src="images/3.png" alt="человечек" />
+            <div>
+              <p class="main-90-text">90+</p>
+              <p class="main-Users-text lng-workers">Workers</p>
+            </div>
+          </div>
+          <div class="main-icon-inner">
+            <img class="main-img-person" src="images/5.png" alt="человечек" />
+            <div>
+              <p class="main-90-text">30+</p>
+              <p class="main-Users-text lng-pharmacy">Pharmacy</p>
+            </div>
+          </div>
+          <div class="main-icon-inner">
+            <img class="main-img-person" src="images/4.png" alt="человечек" />
+            <div>
+              <p class="main-90-text">7+</p>
+              <p class="main-Users-text lng-country">Country</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="Pricing" class="main-container-choise-plan">
+        <h2 class="text-h2 lng-we-are-located">
+          We are located all over the world.
+        </h2>
+        <p class="main-text-se lng-we-work-in">
+          We work in more than 7 countries around the world, this allows us to
+          help as many as possible in need of good medical care
+        </p>
+
+        <div class="stage">
+          <div class="wrap">
+            <img
+              class="main-image-map square"
+              src="images/Huge Global.png"
+              alt="карта мира с отмеченными точками"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="flex-container-second">
+        <img
+          src="images/hand.jpg"
+          class="images-first"
+          alt="картинка с человеком поднятая рука в верх"
+        />
+        <div class="content-container">
+          <h2 id="About" class="text-h2 lng-this-is-what">
+            This is what you get when working with us
+          </h2>
+          <p class="main-2div-text lng-our-goal-is">
+            Our goal is to ensure that our employees receive only the best, so
+            we offer many bonuses
+          </p>
+          <ul>
+            <li>
+              <img src="images/10.png" alt="галочка" />
+              <p class="lng-education-and">Education and development.</p>
+            </li>
+            <li>
+              <img src="images/10.png" alt="галочка" />
+              <p class="lng-comfortable-workplase">Comfortable workplace.</p>
+            </li>
+            <li>
+              <img src="images/10.png" alt="галочка" />
+              <p class="lng-competitive-salary">Competitive salary.</p>
+            </li>
+            <li>
+              <img src="images/10.png" alt="галочка" />
+              <p class="lng-professional-community">Professional community.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="Testimonials" class="main-container-trusted">
+        <div class="main-reviews-h2-text">
+          <h2 class="text-h2 lng-advice-from">Advice from our directors</h2>
+          <p class="main-text-These lng-what-could">
+            What could be better than advice from someone who has worked in our
+            team most of his life; below are tips from those who have really
+            dedicated their lives to our business
+          </p>
+        </div>
+        <div class="main-bloc-reviews">
+          <div class="main-reviews-container">
+            <div class="img-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="main-border-reviews">
+                    <div class="main-text-block-reviews-grid">
+                      <img class="main-img-reviews" src="images/v1_97.png" />
+                      <div>
+                        <p class="main-reviews-name lng-kim">Kim Young Jou</p>
+                        <p class="main-reviews-localiti lng-seoul-south">
+                          Seoul, South Korea
+                        </p>
+                      </div>
+                    </div>
+                    <p class="main-text-reviews lng-our-work-impacts">
+                      “Our work impacts people's health and lives, and we must
+                      always act with the highest level of professionalism and
+                      integrity.”.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="main-border-reviews">
+                    <div class="main-text-block-reviews-grid">
+                      <img class="main-img-reviews" src="images/v1_89.png" />
+                      <div>
+                        <p class="main-reviews-name lng-viezh-robert">
+                          Viezh Robert
+                        </p>
+                        <p class="main-reviews-localiti lng-warsaw-poland">
+                          Warsaw, Poland
+                        </p>
+                      </div>
+                    </div>
+                    <p class="main-text-reviews lng-the-medical">
+                      “The medical industry is constantly evolving, and new
+                      drugs and therapies are constantly entering the market.
+                      Constant learning and self-education is the key to success
+                      in this field.”.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="main-border-reviews">
+                    <div class="main-text-block-reviews-grid">
+                      <img class="main-img-reviews" src="images/v1_93.png" />
+                      <div>
+                        <p class="main-reviews-name lng-yessica-christy">
+                          Yessica Christy
+                        </p>
+                        <p class="main-reviews-localiti lng-shanxi-china">
+                          Shanxi, China
+                        </p>
+                      </div>
+                    </div>
+                    <p class="main-text-reviews lng-our-work-is">
+                      “Our work is not just selling medicines. We care about the
+                      health and well-being of our patients.”.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="main-border-reviews">
+                    <div class="main-text-block-reviews-grid">
+                      <img class="main-img-reviews" src="images/v1_97.png" />
+                      <div>
+                        <p class="main-reviews-name lng-kim">Kim Young Jou</p>
+                        <p class="main-reviews-localiti lng-seoul-south">
+                          Seoul, South Korea
+                        </p>
+                      </div>
+                    </div>
+                    <p class="main-text-reviews lng-our-work-impacts">
+                      “Our work impacts people's health and lives, and we must
+                      always act with the highest level of professionalism and
+                      integrity.”.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-master-container">
+        <section class="footer-container">
+          <div class="footer-question-manual-learn-grid">
+            <div class="footer-question-manual-learn-left-div">
+              <h3 id="about" class="lng-have-question">Have a question?</h3>
+              <p class="footer-discription lng-whatever-it-is">
+                Whatever it is, get in touch:
+              </p>
+              <div class="footer-question-manual-learn-contacts">
+                <div class="footer-question-manual-learn-contacts-circle">
+                  <img src="/MainPage/img/phone.png" alt="" />
+                </div>
+                <div>
+                  <a class="phone-number-anchors" href="tel:+375256311645">
+                    <p class="phone-number">020 8004 7160</p>
+                  </a>
+                  <p class="time lng-mon-fri">Mon-Fri 9:00-17:30</p>
+                </div>
+              </div>
+              <div class="footer-question-manual-learn-contacts">
+                <div class="footer-question-manual-learn-contacts-circle">
+                  <img src="/MainPage/img/message.png" alt="" />
+                </div>
+                <div>
+                  <a href="mailto:help@manual.com" class="phone-number"
+                    >help@manual.com</a
+                  >
+                  <p class="time lng-we-aim-to">We aim to reply in 24hrs</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-question-manual-learn">
+              <div class="left-inform">
+                <p class="learn lng-learn">LEARN</p>
+                <ul>
+                  <li class="lng-erectile-dysfunction">Erectile Dysfunction</li>
+                  <li class="lng-hair">Hair Loss</li>
+                  <li class="lng-skin">Skin</li>
+                  <li class="lng-sex-health">Sexual Health</li>
+                  <li class="lng-masculinity">Masculinity</li>
+                </ul>
+              </div>
+              <div class="right-inform">
+                <p class="learn lng-manual">MANUAL</p>
+                <ul>
+                  <li class="lng-home">Home</li>
+                  <li class="lng-mission">Mission</li>
+                  <li class="lng-faq">FAQ</li>
+                  <li class="lng-medical-experts">Medical Experts</li>
+                  <li class="lng-success-stories">Success Stories</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <button
+                id="button-theme"
+                href="#"
+                class="btn-flip"
+                data-back="Theme"
+                data-front="
+              Switch"
+              ></button>
+              <select class="switch-lng">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer-logo-social-net">
+          <img
+            class="signature"
+            src="/MainPage/img/signature-manual.png"
+            alt=""
+          />
+          <div class="social-net">
+            <div>
+              <img src="/MainPage/img/facebok.svg" alt="" />
+            </div>
+            <div>
+              <img src="/MainPage/img/twiter.png" alt="" />
+            </div>
+            <div>
+              <img src="/MainPage/img/instagram.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-text-container">
+            <p class="lng-privacy-policy">Privacy Policy</p>
+            <p class="lng-terms-conditions">Terms & Conditions</p>
+            <p class="lng-terms-sale">Terms of Sale</p>
+            <p class="lng-complaints">Complaints</p>
+          </div>
+          <p class="footer-text-last lng-pharmacies">
+            Pharmacies: Manual Pharmacy
+          </p>
+          <p class="footer-text-last lng-copyright">
+            Copyright 2021 Manual™. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="/Translate/lng_script.js"></script>
+    <script src="/Translate/script_translate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script_swiper.js"></script>
+  </body>
+</html>

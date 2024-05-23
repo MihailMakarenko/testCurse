@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link type="image/x-icon" href="/favicon.png" rel="shortcut icon" />
+    <title class="lng-registration">Registration</title>
+    <link rel="stylesheet" href="/MainPage/Cursach.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <button class="lng-header-back" id="header-main-page" onclick="back()">
+          Back
+        </button>
+        <div class="central-img">
+          <svg
+            id="manula-color"
+            class="manual"
+            xmlns="http://www.w3.org/2000/svg"
+            width="176"
+            height="44"
+            viewBox="0 0 176 44"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M43.3736 5.00159L31.8604 37.1797H35.2735L38.4262 28.1712H51.2306L54.4156 37.1797H57.8287L46.3154 5.00159H43.3736ZM44.7961 9.97094L49.7834 24.0779H39.8594L44.7961 9.97254V9.97094ZM132.832 5.00159L121.318 37.1797H124.731L127.884 28.1712H140.688L143.873 37.1797H147.286L135.773 5.00159H132.832ZM134.254 9.97094L139.242 24.0779H129.317L134.254 9.97254V9.97094ZM153.346 5.00159V37.1797H172V32.9638H156.514V5.00159H153.346ZM83.3008 5.00159V30.9776L66.7412 5H63.8887V37.1797H66.9069V11.2977L83.4128 37.1797H86.319V5.00159H83.3008ZM113.891 23.0601C113.891 30.5109 110.487 33.7904 105.928 33.7904C101.369 33.7904 97.9657 30.5093 97.9657 23.0601V5H94.7979V23.0059C94.7979 33.3699 99.4 38 105.928 38C112.456 38 117.058 33.3699 117.058 23.0059V5H113.891V23.0601ZM12.9002 21.3511L2.85248 5H0V37.1797H3.01819V11.2977L12.9002 27.3143L22.7811 11.2961V37.1797H25.8004V5.00159H22.9479L12.9002 21.3511Z"
+            />
+          </svg>
+        </div>
+        <button
+          class="lng-header-home"
+          id="header-home-page"
+          onclick="goHome()"
+        >
+          Home
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="container-block">
+        <h1 class="lng-registration">Registration</h1>
+        <button id="Enter" class="styleButton lng-login">log in</button>
+        <div class="input-container">
+          <p class="input-inform lng-phone-table">Phone Number</p>
+          <input
+            type="tel"
+            name="phone"
+            maxlength="17"
+            placeholder="+375(__)___-__-__"
+            id="phone"
+            required
+          />
+          <span id="phone-error" class="Obligatory-field lng-Obligatory"
+            >Obligatory field</span
+          >
+        </div>
+        <div class="input-container">
+          <p class="input-inform lng-email-table">Email</p>
+          <input type="email" id="email" required />
+          <span id="error-email" class="Obligatory-field lng-Obligatory"
+            >Obligatory field</span
+          >
+        </div>
+        <div class="input-container">
+          <p class="input-inform lng-Birthday-table">Birthday</p>
+          <input
+            type="date"
+            id="BirthdayID"
+            data-uk-datepicker="{format:'DD.MM.YYYY'}"
+          />
+          <span id="birthday-error-id" class="Obligatory-field lng-Obligatory"
+            >Obligatory field</span
+          >
+        </div>
+        <div class="input-container">
+          <p class="input-inform lng-first-name-table">First Name</p>
+          <input
+            type="text"
+            required
+            id="first-name"
+            minlength="2"
+            maxlength="30"
+          />
+          <span id="first-name-error" class="Obligatory-field lng-Obligatory"
+            >Obligatory field</span
+          >
+        </div>
+        <div class="input-container">
+          <p class="input-inform lng-Surname-table">Surname</p>
+          <input
+            type="text"
+            required
+            id="second-name"
+            minlength="2"
+            maxlength="30"
+          />
+          <span id="second-name-error" class="Obligatory-field lng-Obligatory"
+            >Obligatory field</span
+          >
+        </div>
+        <div class="input-container">
+          <p class="input-inform lng-Last-name">Last Name</p>
+          <input type="text" id="last-name" />
+        </div>
+        <div class="input-container">
+          <p class="input-inform lng-nickname-table">Nickname</p>
+          <input type="text" required id="nickname" maxlength="30" />
+          <span id="nickname-error" class="Obligatory-field lng-Obligatory"
+            >Obligatory field</span
+          >
+        </div>
+        <button id="generate-nickname" class="glow-on-hover lng-Get-nick">
+          Get nick
+        </button>
+        <div class="input-container">
+          <p class="input-inform lng-Passwords-table">Password</p>
+          <input
+            id="password-input"
+            type="password"
+            maxlength="20"
+            minlength="8"
+          />
+          <span id="password-error" class="Obligatory-field lng-Obligatory"
+            >Obligatory-field</span
+          >
+        </div>
+        <div class="input-container">
+          <p class="input-inform lng-Repeat-password">Repeat Password</p>
+          <input
+            id="password-repeat-input"
+            type="password"
+            onpaste="return false"
+          />
+          <span
+            id="password-repeat-error"
+            class="Obligatory-field lng-Obligatory"
+            >Obligatory-field</span
+          >
+        </div>
+        <button
+          id="generate-password"
+          class="glow-on-hover lng-Generate-password"
+        >
+          Generate Password
+        </button>
+        <div class="container-terms-of-use">
+          <input id="checkbox-user-agreement" type="checkbox" disabled />
+          <span class="lng-I-accept">I accept the terms of the</span>
+
+          <a id="myLink" class="lng-User-agreement">user agreement</a>
+          <span class="lng-required">(required reading)</span>
+        </div>
+        <div class="container-button">
+          <button id="floating-button-registration">
+            <p class="lng-registration">Registration</p>
+          </button>
+        </div>
+        <div id="finish-modal">
+          <div id="finish-registration">
+            <button id="button-continue" class="styleButton lng-Continue">
+              Continue
+            </button>
+            <button id="button-exit" class="styleButton lng-Exit">Exit</button>
+          </div>
+        </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="lng-I-agree-text">Text user agreement</p>
+            <button id="Agree">
+              <p class="lng-I-agree">I agree</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-master-container">
+        <section class="footer-container">
+          <div class="footer-question-manual-learn-grid">
+            <div class="footer-question-manual-learn-left-div">
+              <h3 id="about" class="lng-have-question">Have a question?</h3>
+              <p class="footer-discription lng-whatever-it-is">
+                Whatever it is, get in touch:
+              </p>
+              <div class="footer-question-manual-learn-contacts">
+                <div class="footer-question-manual-learn-contacts-circle">
+                  <img src="/MainPage/img/phone.png" alt="" />
+                </div>
+                <div>
+                  <a class="phone-number-anchors" href="tel:+375256311645">
+                    <p class="phone-number">020 8004 7160</p>
+                  </a>
+                  <p class="time lng-mon-fri">Mon-Fri 9:00-17:30</p>
+                </div>
+              </div>
+              <div class="footer-question-manual-learn-contacts">
+                <div class="footer-question-manual-learn-contacts-circle">
+                  <img src="/MainPage/img/message.png" alt="" />
+                </div>
+                <div>
+                  <a href="mailto:help@manual.com" class="phone-number"
+                    >help@manual.com</a
+                  >
+                  <p class="time lng-we-aim-to">We aim to reply in 24hrs</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-question-manual-learn">
+              <div class="left-inform">
+                <p class="learn lng-learn">LEARN</p>
+                <ul>
+                  <li class="lng-erectile-dysfunction">Erectile Dysfunction</li>
+                  <li class="lng-hair">Hair Loss</li>
+                  <li class="lng-skin">Skin</li>
+                  <li class="lng-sex-health">Sexual Health</li>
+                  <li class="lng-masculinity">Masculinity</li>
+                </ul>
+              </div>
+              <div class="right-inform">
+                <p class="learn lng-manual">MANUAL</p>
+                <ul>
+                  <li class="lng-home">Home</li>
+                  <li class="lng-mission">Mission</li>
+                  <li class="lng-faq">FAQ</li>
+                  <li class="lng-medical-experts">Medical Experts</li>
+                  <li class="lng-success-stories">Success Stories</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <button
+                id="button-theme"
+                href="#"
+                class="btn-flip"
+                data-back="Theme"
+                data-front="
+              Switch"
+              ></button>
+              <select class="switch-lng">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer-logo-social-net">
+          <img
+            class="signature"
+            src="/MainPage/img/signature-manual.png"
+            alt=""
+          />
+          <div class="social-net">
+            <div>
+              <img src="/MainPage/img/facebok.svg" alt="" />
+            </div>
+            <div>
+              <img src="/MainPage/img/twiter.png" alt="" />
+            </div>
+            <div>
+              <img src="/MainPage/img/instagram.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-text-container">
+            <p class="lng-privacy-policy">Privacy Policy</p>
+            <p class="lng-terms-conditions">Terms & Conditions</p>
+            <p class="lng-terms-sale">Terms of Sale</p>
+            <p class="lng-complaints">Complaints</p>
+          </div>
+          <p class="footer-text-last lng-pharmacies">
+            Pharmacies: Manual Pharmacy
+          </p>
+          <p class="footer-text-last lng-copyright">
+            Copyright 2021 Manual™. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="/Translate/lng_script.js"></script>
+    <script src="/Translate/script_translate.js"></script>
+  </body>
+</html>

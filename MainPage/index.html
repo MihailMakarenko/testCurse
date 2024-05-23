@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="Cursach.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link type="image/x-icon" href="/favicon.png" rel="shortcut icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title class="lng-cursach">Cursach</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-container-link header-container-link-left">
+          <button id="blackOverId" class="blackOver"></button>
+          <button id="burger" class="header-button-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div
+            class="header-link"
+            style="display: flex; gap: calc(20px + 16 * (100vw - 768px) / 672)"
+          >
+            <a class="background-color-anchors lng-shop" href="#shop">SHOP</a>
+            <a class="background-color-anchors lng-read" href="#read">READ</a>
+            <a
+              id="header-about-left"
+              class="background-color-anchors lng-about"
+              href="#about"
+              >ABOUT</a
+            >
+          </div>
+        </div>
+        <div class="central-img">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="176"
+            height="44"
+            viewBox="0 0 176 44"
+            fill="none"
+          >
+            <path
+              class="manual"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M43.3736 5.00159L31.8604 37.1797H35.2735L38.4262 28.1712H51.2306L54.4156 37.1797H57.8287L46.3154 5.00159H43.3736ZM44.7961 9.97094L49.7834 24.0779H39.8594L44.7961 9.97254V9.97094ZM132.832 5.00159L121.318 37.1797H124.731L127.884 28.1712H140.688L143.873 37.1797H147.286L135.773 5.00159H132.832ZM134.254 9.97094L139.242 24.0779H129.317L134.254 9.97254V9.97094ZM153.346 5.00159V37.1797H172V32.9638H156.514V5.00159H153.346ZM83.3008 5.00159V30.9776L66.7412 5H63.8887V37.1797H66.9069V11.2977L83.4128 37.1797H86.319V5.00159H83.3008ZM113.891 23.0601C113.891 30.5109 110.487 33.7904 105.928 33.7904C101.369 33.7904 97.9657 30.5093 97.9657 23.0601V5H94.7979V23.0059C94.7979 33.3699 99.4 38 105.928 38C112.456 38 117.058 33.3699 117.058 23.0059V5H113.891V23.0601ZM12.9002 21.3511L2.85248 5H0V37.1797H3.01819V11.2977L12.9002 27.3143L22.7811 11.2961V37.1797H25.8004V5.00159H22.9479L12.9002 21.3511Z"
+            />
+          </svg>
+        </div>
+
+        <div class="header-container-link header-container-link-right">
+          <a
+            id="header-about-right"
+            class="background-color-anchors lng-about"
+            href="#about"
+            >ABOUT</a
+          >
+          <a
+            id="anchor-login"
+            class="background-color-anchors lng-login"
+            href="/Autorization/index.html"
+            >LOGIN</a
+          >
+          <div class="header-person-icon">
+            <img id="avatar" src="img/avatar.svg" alt="" />
+            <div class="header-person-icon-information">
+              <div class="header-person-icon-information-container">
+                <div>
+                  <span class="lng-nickname-table">nickname:</span>
+                  <span id="nickName-person"></span>
+                </div>
+                <div>
+                  <span class="lng-first-name-table">Имя:</span>
+                  <span id="name-person"></span>
+                </div>
+                <div>
+                  <span class="lng-email-table">Почта:</span>
+                  <span id="email-person"></span>
+                </div>
+                <div>
+                  <span class="lng-phone-table">Телефон:</span>
+                  <span id="phone-person"></span>
+                </div>
+                <button id="button-exit" class="lng-Exit" onclick="exit()">
+                  Exit
+                </button>
+              </div>
+            </div>
+          </div>
+          <a
+            class="background-color-anchors"
+            id="basket-ahcors"
+            href="/Catalog/index.html"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="23"
+              viewBox="0 0 19 23"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1_40)">
+                <path
+                  id="header-catalog-first"
+                  d="M1.48199 5.4541L0.521261 19.8216C0.521261 19.8751 0.521261 19.9285 0.521261 19.982C0.519916 20.3112 0.584676 20.6374 0.711842 20.942C0.839009 21.2466 1.02609 21.5236 1.26241 21.7573C1.49873 21.991 1.77965 22.1768 2.08914 22.3039C2.39863 22.4311 2.73063 22.4973 3.06618 22.4986H16.1076C16.4425 22.4769 16.7698 22.3907 17.0707 22.245C17.3716 22.0992 17.6403 21.8967 17.8615 21.649C18.0826 21.4014 18.2519 21.1134 18.3595 20.8016C18.4672 20.4897 18.5112 20.1601 18.489 19.8316L17.518 5.4541H1.48199Z"
+                  fill="black"
+                />
+                <path
+                  id="header-catalog-second"
+                  d="M6.13235 4.01067C6.09639 3.56127 6.15557 3.10942 6.30619 2.68354C6.45681 2.25765 6.6956 1.86694 7.00756 1.53594C7.31952 1.20495 7.6979 0.940839 8.11892 0.760207C8.53995 0.579574 8.9945 0.486328 9.45403 0.486328C9.91356 0.486328 10.3681 0.579574 10.7891 0.760207C11.2102 0.940839 11.5885 1.20495 11.9005 1.53594C12.2125 1.86694 12.4513 2.25765 12.6019 2.68354C12.7525 3.10942 12.8117 3.56127 12.7757 4.01067"
+                  fill="black"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_40">
+                  <rect width="19" height="23" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="main-first-section">
+        <div class="main-container-first-img-h1">
+          <img class="first-img-main" src="img/first_main_img.png" alt="" />
+          <div class="main-container-first-img-h1-inner-container">
+            <h1 class="lng-h1-mens">Men’s health. The way it should be.</h1>
+            <p class="lng-no-waiting">
+              No waiting rooms or awkward conversations. Just clinically proven
+              treatments direct to your door with support along the way.
+            </p>
+            <div class="flex-container-button">
+              <button id="get-started" onclick="goPage(0)">
+                <span class="lng-get-started">GET STARTED</span>
+              </button>
+              <button id="adminPanel" onclick="goPage(1)">
+                <span class="lng-view-treatments">View Treatments</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="main-container-first-icon-grid">
+          <div>
+            <img src="img/first-icon-plus.png" alt="" />
+            <p class="lng-uk-licenced">UK licenced medication</p>
+          </div>
+          <div>
+            <img src="img/second-icon-box.png" alt="" />
+            <p class="lng-free-discreet">Free, discreet delivery</p>
+          </div>
+          <div>
+            <img class="cross" src="img/trhee-icon-cross.png" alt="" />
+            <p class="lng-cancel-any">Cancel any time</p>
+          </div>
+          <div>
+            <img src="img/four-icon-face.png" alt="" />
+            <p class="lng-ongoing-clinician">Ongoing clinician support</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-second-section">
+        <h2 class="lng-healthcare-made">Healthcare. Made easy.</h2>
+        <img id="star" src="img/Star-icon.png" alt="" />
+        <p id="read" class="lng-rated-excellent">
+          Rated excellent on Trustpilot
+        </p>
+        <div class="main-container-card">
+          <div class="card">
+            <div>
+              <img
+                class="first-card"
+                src="img/second-container-first-img-card.png"
+                alt=""
+              />
+            </div>
+            <h3 class="lng-treatments-online">Treatments online</h3>
+            <p class="lng-well-ask-you">
+              We’ll ask you a couple of quick medical questions. Tick the boxes
+              and a clinician will review your answers and issue you a
+              prescription.
+            </p>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                class="second-card"
+                src="img/second-container-second-img-card.png"
+                alt=""
+              />
+            </div>
+            <h3 class="lng-free-fast">Free fast delivery</h3>
+            <p class="lng-your-selected">
+              Your selected treatments will be delivered for free in discreet
+              packaging. There’ll be some helpful info included to make sure you
+              get the best out of it.
+            </p>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                class="thrid-card"
+                src="img/second-container-third-img-card.png"
+                alt=""
+              />
+            </div>
+            <h3 class="lng-clinician-support">Clinician support</h3>
+            <p class="lng-chat-with">
+              Chat with a medical expert whenever you need. On the phone or via
+              email. With support throughout your treatment.
+            </p>
+          </div>
+        </div>
+        <div class="loop">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="112"
+            height="187"
+            viewBox="0 0 112 187"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_1_115)">
+              <path
+                id="loop-first"
+                d="M43.59 180.423C43.59 180.423 43.297 183.418 43.5 185.415C41.2 184.499 40.014 184.049 39.104 183.885"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="loop-second"
+                d="M1.27001 1.0332C-0.873989 28.1668 8.79902 84.1955 64.66 91.2468C134.487 100.061 119.136 10.8843 60.203 39.9189C1.27101 68.9524 25.537 158.646 42.87 184.052"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_1_115">
+                <rect width="112" height="187" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <!-- <img id="loop" src="img/loop.svg" alt="" /> -->
+      </section>
+
+      <section class="main-third-section">
+        <div class="main-trhird-siction-container">
+          <h2 id="shop" class="lng-most-effective">
+            The most effective treatments. Backed by science.
+          </h2>
+          <div class="main-card-treatments">
+            <div class="main-card-treatments-card background-color-milck">
+              <div class="main-card-treasments-inner-container">
+                <img src="img/hair-img.png" alt="" />
+                <h3 class="lng-hair-loss">Hair Loss</h3>
+                <p class="lng-how-hair">
+                  Now hair loss is treatable. There are clinically proven
+                  treatments effective in 9/10 men. And we have them all here.
+                </p>
+              </div>
+              <div class="main-card-treasments-inner-container-view-line">
+                <a class="background-color-anchors lng-view-treatments" href=""
+                  >View Treatments</a
+                >
+                <div class="line"></div>
+              </div>
+            </div>
+            <div class="main-card-treatments-card background-color-milck">
+              <div class="main-card-treasments-inner-container">
+                <img src="img/sex-img.png" alt="" />
+                <h3 class="lng-sex-health">Sex health</h3>
+                <p class="lng-erectile-dysfunction">
+                  Erectile dysfunction (ED) happens to a lot of us. We can help
+                  you figure out why. And offer a number of treatments that can
+                  help too.
+                </p>
+              </div>
+              <div class="main-card-treasments-inner-container-view-line">
+                <a class="background-color-anchors lng-view-treatments" href=""
+                  >View Treatments</a
+                >
+                <div class="line"></div>
+              </div>
+            </div>
+            <div class="main-card-treatments-card background-color-milck">
+              <div class="main-card-treasments-inner-container">
+                <img src="img/scin-img.png" alt="" />
+                <h3 class="lng-skin">Skin</h3>
+                <p class="lng-healthy-skin">
+                  Healthy skin is key to keep you feeling and looking your best.
+                  We’ve harnessed the best science has to offer so you can look
+                  after yours.
+                </p>
+              </div>
+              <div class="main-card-treasments-inner-container-view-line">
+                <a class="background-color-anchors lng-view-treatments" href=""
+                  >View Treatments</a
+                >
+                <div class="line"></div>
+              </div>
+            </div>
+            <div class="main-card-treatments-card background-color-milck">
+              <div class="main-card-treasments-inner-container">
+                <img src="img/daily-img.png" alt="" />
+                <h3 class="lng-daily-health">Daily Health</h3>
+                <p class="lng-help-your-body">
+                  Help your body fight the good fight with our scientifically
+                  proven range of nutrients and vitamins. Making healthier
+                  easier, every day.
+                </p>
+              </div>
+              <div class="main-card-treasments-inner-container-view-line">
+                <a class="background-color-anchors lng-view-treatments" href=""
+                  >View Treatments</a
+                >
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-fourth-section background-color-milck">
+        <div class="main-left-text">
+          <div id="new">
+            <p>new</p>
+          </div>
+          <h2 class="lng-manual-wellbeing">Manual Wellbeing</h2>
+          <div id="main-left-text-full">
+            <p class="lng-our-new">
+              Our new offering is a holistic plan to improve your health with
+              recommendations from medical experts, as well as tracking and
+              ongoing clinician support.
+            </p>
+          </div>
+          <button class="lng-view-more">VIEW MORE</button>
+          <div id="grid-check-mark">
+            <div class="main-container-check-mark-flex">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="11"
+                  height="11"
+                  viewBox="0 0 11 11"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_0_173)">
+                    <path
+                      class="check-mark"
+                      d="M0 5.5L3.36142 9.5L10.0833 1.5"
+                      stroke-width="1.5"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_0_173">
+                      <rect width="11" height="11" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+
+              <p class="lng-online-consultation">Online consultation</p>
+            </div>
+            <div class="main-container-check-mark-flex">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="11"
+                  height="11"
+                  viewBox="0 0 11 11"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_0_173)">
+                    <path
+                      class="check-mark"
+                      d="M0 5.5L3.36142 9.5L10.0833 1.5"
+                      stroke-width="1.5"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_0_1734">
+                      <rect width="11" height="11" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+
+              <p class="lng-personalised-health">Personalised health plan</p>
+            </div>
+            <div class="main-container-check-mark-flex">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="11"
+                  height="11"
+                  viewBox="0 0 11 11"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_0_173)">
+                    <path
+                      class="check-mark"
+                      d="M0 5.5L3.36142 9.5L10.0833 1.5"
+                      stroke-width="1.5"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_0_173">
+                      <rect width="11" height="11" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <!-- <img src="img/check-mark.svg" alt="" /> -->
+              <p class="lng-tracking-clinician">Tracking & Clinician support</p>
+            </div>
+          </div>
+        </div>
+        <div class="main-right-icons">
+          <div>
+            <img src="img/icon-hair.png" alt="" />
+            <p class="lng-hair">Hair</p>
+          </div>
+          <div>
+            <img src="img/icon-immunity.png" alt="" />
+            <p class="lng-immunity">Immunity</p>
+          </div>
+          <div>
+            <img src="img/icon-sleep.png" alt="" />
+            <p class="lng-sleep">Sleep</p>
+          </div>
+          <div>
+            <img src="img/icon-sex.png" alt="" />
+            <p class="lng-sex-health">Sex Health</p>
+          </div>
+          <div>
+            <img src="img/icon-brain.png" alt="" />
+            <p class="lng-brain">Brain</p>
+          </div>
+          <div>
+            <img src="img/icon-digestion.png" alt="" />
+            <p class="lng-digestion">Digestion</p>
+          </div>
+          <div>
+            <img src="img/icon-heart.png" alt="" />
+            <p class="lng-heart">Heart</p>
+          </div>
+          <div>
+            <img src="img/icon-muscles.png" alt="" />
+            <p class="lng-muscles">Muscles</p>
+          </div>
+          <div>
+            <img src="img/icon-skin.png" alt="" />
+            <p class="lng-skin">Skin</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-fifth-container">
+        <p class="main-text-description lng-our-medical-team">
+          Our medical team work round the clock to bring you the most effective
+          treatments available in the UK
+        </p>
+        <p class="main-text-person lng-dr-earim">
+          Dr. Earim Chaudry, Medical Director
+        </p>
+        <img id="img-ring-person" src="img/img-person.png" alt="" />
+        <div class="main-logo-Truspilot-star">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="160"
+            height="39"
+            viewBox="0 0 160 39"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_0_437)">
+              <path
+                class="transpilots"
+                d="M42.048 13.8224H58.2486V16.8224H51.8786V33.6869H48.3757V16.8224H42.0339V13.8224H42.048ZM57.5565 19.3037H60.5509V22.0794H60.6074C60.7062 21.6869 60.8899 21.3084 61.1582 20.9439C61.4266 20.5794 61.7514 20.229 62.1328 19.9346C62.5141 19.6262 62.9379 19.3878 63.404 19.1916C63.8701 19.0093 64.3503 18.9112 64.8305 18.9112C65.1978 18.9112 65.4661 18.9252 65.6074 18.9392C65.7486 18.9533 65.8899 18.9813 66.0452 18.9953V22.0514C65.8192 22.0093 65.5932 21.9813 65.3531 21.9533C65.113 21.9252 64.887 21.9112 64.661 21.9112C64.1243 21.9112 63.6158 22.0234 63.1356 22.2336C62.6554 22.4439 62.2458 22.7663 61.8927 23.1729C61.5396 23.5935 61.2571 24.0981 61.0452 24.7149C60.8334 25.3318 60.7345 26.0327 60.7345 26.8318V33.6729H57.5424V19.3037H57.5565ZM80.7204 33.6869H77.5848V31.6822H77.5283C77.1328 32.4112 76.5537 32.986 75.7769 33.4206C75 33.8551 74.2091 34.0794 73.404 34.0794C71.4972 34.0794 70.113 33.6168 69.2656 32.6776C68.4181 31.7383 67.9944 30.3224 67.9944 28.4299V19.3037H71.1865V28.1215C71.1865 29.3832 71.4266 30.2804 71.9209 30.7991C72.4012 31.3177 73.0932 31.5841 73.9689 31.5841C74.6469 31.5841 75.1978 31.486 75.6497 31.2757C76.1017 31.0654 76.4689 30.7991 76.7373 30.4486C77.0198 30.1121 77.2175 29.6916 77.3447 29.2149C77.4718 28.7383 77.5283 28.2196 77.5283 27.6589V19.3178H80.7204V33.6869ZM86.1582 29.0748C86.2571 30 86.6102 30.6449 87.2175 31.0234C87.839 31.3878 88.5735 31.5841 89.4351 31.5841C89.7317 31.5841 90.0706 31.5561 90.452 31.514C90.8334 31.472 91.2006 31.3738 91.5254 31.2477C91.8644 31.1215 92.1328 30.9252 92.3588 30.6729C92.5706 30.4206 92.6695 30.0981 92.6554 29.6916C92.6413 29.285 92.4859 28.9486 92.2034 28.6963C91.9209 28.4299 91.5678 28.2336 91.13 28.0654C90.6921 27.9112 90.1978 27.771 89.6328 27.6589C89.0678 27.5467 88.5028 27.4206 87.9237 27.2944C87.3305 27.1682 86.7514 27 86.2006 26.8177C85.6497 26.6355 85.1554 26.3832 84.7175 26.0607C84.2797 25.7523 83.9266 25.3458 83.6723 24.8551C83.404 24.3645 83.2769 23.7617 83.2769 23.0327C83.2769 22.2477 83.4746 21.6028 83.856 21.0701C84.2373 20.5374 84.7317 20.1168 85.3108 19.7944C85.904 19.472 86.5537 19.2477 87.274 19.1075C87.9944 18.9813 88.6865 18.9112 89.3362 18.9112C90.0848 18.9112 90.8051 18.9953 91.4831 19.1495C92.161 19.3037 92.7825 19.5561 93.3334 19.9206C93.8842 20.271 94.3362 20.7336 94.7034 21.2944C95.0706 21.8551 95.2966 22.542 95.3955 23.3411H92.0622C91.9068 22.5841 91.5678 22.0654 91.017 21.8131C90.4661 21.5467 89.8305 21.4206 89.1243 21.4206C88.8983 21.4206 88.63 21.4346 88.3192 21.4766C88.0085 21.5187 87.726 21.5888 87.4435 21.6869C87.1752 21.785 86.9492 21.9392 86.7514 22.1355C86.5678 22.3318 86.4689 22.5841 86.4689 22.9065C86.4689 23.2991 86.6102 23.6075 86.8785 23.8458C87.1469 24.0841 87.5 24.2804 87.9379 24.4486C88.3757 24.6028 88.8701 24.743 89.4351 24.8551C90 24.9673 90.5791 25.0934 91.1723 25.2196C91.7514 25.3458 92.3164 25.514 92.8814 25.6963C93.4463 25.8785 93.9407 26.1308 94.3786 26.4533C94.8164 26.7757 95.1695 27.1682 95.4379 27.6449C95.7062 28.1215 95.8475 28.7243 95.8475 29.4252C95.8475 30.2804 95.6497 30.9953 95.2543 31.5981C94.8588 32.1869 94.3503 32.6776 93.7288 33.042C93.1074 33.4065 92.4011 33.6869 91.6384 33.8551C90.8757 34.0234 90.113 34.1075 89.3644 34.1075C88.4464 34.1075 87.5989 34.0093 86.8221 33.7991C86.0452 33.5888 85.3673 33.2804 84.8023 32.8738C84.2373 32.4533 83.7853 31.9346 83.4605 31.3177C83.1356 30.7009 82.9661 29.9579 82.9379 29.1028H86.1582V29.0748ZM96.6949 19.3037H99.1102V14.986H102.302V19.3037H105.184V21.6729H102.302V29.3551C102.302 29.6916 102.316 29.972 102.345 30.2243C102.373 30.4626 102.444 30.6729 102.542 30.8411C102.641 31.0093 102.797 31.1355 103.008 31.2196C103.22 31.3037 103.489 31.3458 103.856 31.3458C104.082 31.3458 104.308 31.3458 104.534 31.3318C104.76 31.3177 104.986 31.2897 105.212 31.2336V33.6869C104.859 33.729 104.506 33.757 104.181 33.7991C103.842 33.8411 103.503 33.8551 103.15 33.8551C102.302 33.8551 101.624 33.771 101.116 33.6168C100.607 33.4626 100.198 33.2243 99.9153 32.9159C99.6187 32.6075 99.4351 32.229 99.3221 31.7663C99.2232 31.3037 99.1526 30.771 99.1384 30.1822V21.7009H96.7232V19.3037H96.6949ZM107.444 19.3037H110.466V21.2523H110.523C110.975 20.4112 111.596 19.8224 112.401 19.4579C113.206 19.0935 114.068 18.9112 115.014 18.9112C116.158 18.9112 117.147 19.1075 117.994 19.514C118.842 19.9065 119.548 20.4533 120.113 21.1542C120.678 21.8551 121.088 22.6682 121.37 23.5935C121.653 24.5187 121.794 25.514 121.794 26.5654C121.794 27.5327 121.667 28.472 121.412 29.3692C121.158 30.2804 120.777 31.0794 120.268 31.7804C119.76 32.4813 119.11 33.028 118.319 33.4486C117.528 33.8692 116.61 34.0794 115.537 34.0794C115.071 34.0794 114.605 34.0374 114.138 33.9533C113.672 33.8692 113.22 33.729 112.797 33.5467C112.373 33.3645 111.963 33.1262 111.61 32.8318C111.243 32.5374 110.946 32.2009 110.692 31.8224H110.636V39H107.444V19.3037ZM118.602 26.5093C118.602 25.8645 118.517 25.2336 118.347 24.6168C118.178 24 117.924 23.4673 117.585 22.9906C117.246 22.514 116.822 22.1355 116.328 21.8551C115.819 21.5748 115.24 21.4206 114.59 21.4206C113.249 21.4206 112.232 21.8832 111.554 22.8084C110.876 23.7336 110.537 24.9673 110.537 26.5093C110.537 27.2383 110.621 27.9112 110.805 28.528C110.989 29.1449 111.243 29.6776 111.61 30.1262C111.963 30.5748 112.387 30.9252 112.881 31.1776C113.376 31.4439 113.955 31.5701 114.605 31.5701C115.339 31.5701 115.946 31.4159 116.455 31.1215C116.963 30.8271 117.373 30.4346 117.698 29.972C118.023 29.4953 118.263 28.9626 118.404 28.3598C118.531 27.757 118.602 27.1402 118.602 26.5093ZM124.237 13.8224H127.429V16.8224H124.237V13.8224ZM124.237 19.3037H127.429V33.6869H124.237V19.3037ZM130.283 13.8224H133.475V33.6869H130.283V13.8224ZM143.263 34.0794C142.105 34.0794 141.073 33.8832 140.17 33.5047C139.266 33.1262 138.503 32.5935 137.867 31.9346C137.246 31.2617 136.766 30.4626 136.441 29.5374C136.116 28.6121 135.946 27.5888 135.946 26.4813C135.946 25.3878 136.116 24.3785 136.441 23.4533C136.766 22.528 137.246 21.729 137.867 21.0561C138.489 20.3832 139.266 19.8645 140.17 19.486C141.073 19.1075 142.105 18.9112 143.263 18.9112C144.421 18.9112 145.452 19.1075 146.356 19.486C147.26 19.8645 148.023 20.3972 148.658 21.0561C149.28 21.729 149.76 22.528 150.085 23.4533C150.41 24.3785 150.579 25.3878 150.579 26.4813C150.579 27.5888 150.41 28.6121 150.085 29.5374C149.76 30.4626 149.28 31.2617 148.658 31.9346C148.037 32.6075 147.26 33.1262 146.356 33.5047C145.452 33.8832 144.421 34.0794 143.263 34.0794ZM143.263 31.5701C143.969 31.5701 144.59 31.4159 145.113 31.1215C145.636 30.8271 146.059 30.4346 146.398 29.9579C146.737 29.4813 146.977 28.9346 147.147 28.3318C147.302 27.729 147.387 27.1121 147.387 26.4813C147.387 25.8645 147.302 25.2617 147.147 24.6449C146.992 24.028 146.737 23.4953 146.398 23.0187C146.059 22.542 145.636 22.1635 145.113 21.8692C144.59 21.5748 143.969 21.4206 143.263 21.4206C142.557 21.4206 141.935 21.5748 141.412 21.8692C140.89 22.1635 140.466 22.5561 140.127 23.0187C139.788 23.4953 139.548 24.028 139.379 24.6449C139.223 25.2617 139.138 25.8645 139.138 26.4813C139.138 27.1121 139.223 27.729 139.379 28.3318C139.534 28.9346 139.788 29.4813 140.127 29.9579C140.466 30.4346 140.89 30.8271 141.412 31.1215C141.935 31.4299 142.557 31.5701 143.263 31.5701ZM151.511 19.3037H153.927V14.986H157.119V19.3037H160V21.6729H157.119V29.3551C157.119 29.6916 157.133 29.972 157.161 30.2243C157.189 30.4626 157.26 30.6729 157.359 30.8411C157.458 31.0093 157.613 31.1355 157.825 31.2196C158.037 31.3037 158.305 31.3458 158.672 31.3458C158.898 31.3458 159.124 31.3458 159.35 31.3318C159.576 31.3177 159.802 31.2897 160.028 31.2336V33.6869C159.675 33.729 159.322 33.757 158.997 33.7991C158.658 33.8411 158.319 33.8551 157.966 33.8551C157.119 33.8551 156.441 33.771 155.932 33.6168C155.424 33.4626 155.014 33.2243 154.732 32.9159C154.435 32.6075 154.251 32.229 154.138 31.7663C154.04 31.3037 153.969 30.771 153.955 30.1822V21.7009H151.54V19.3037H151.511Z"
+              />
+              <path
+                d="M38.3192 13.8224H23.6864L19.1667 0L14.6328 13.8224L0 13.8084L11.8503 22.3598L7.31638 36.1682L19.1667 27.6308L31.0028 36.1682L26.4831 22.3598L38.3192 13.8224Z"
+                fill="#00B67A"
+              />
+              <path
+                d="M27.5 25.486L26.483 22.3598L19.1667 27.6308L27.5 25.486Z"
+                fill="#005128"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_0_437">
+                <rect width="160" height="39" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <img class="main-star" src="img/Star-icon.png" alt="" />
+        </div>
+        <p class="main-text-reviews lng-based-on">Based on 1169 reviews</p>
+        <div class="main-fifth-container-slider-panel">
+          <div class="img-slider swiper">
+            <div id="first-swiper" class="swiper-wrapper">
+              <div class="swiper-slide background-color-milck">
+                <!-- <div class="background-color-slide background-color-milck">
+                  <div class="slide-inner">
+                    <div
+                      class="main-fifth-container-slider-panel-container-star-container"
+                    >
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                    </div>
+                    <p class="quick lng-great-product-love">
+                      Great product love the smell and the feeling.
+                    </p>
+                  </div>
+                  <p class="Zander lng-simon">Simon</p>
+                  <img class="slide-circle" src="img/slide-circle.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide background-color-milck">
+                <div class="background-color-slide">
+                  <div class="slide-inner">
+                    <div
+                      class="main-fifth-container-slider-panel-container-star-container"
+                    >
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                    </div>
+                    <p class="quick lng-quick-and-discreet">
+                      Quick and discreet and saved me a trip to the GP.
+                    </p>
+                  </div>
+                  <p class="Zander lng-zander">Zander</p>
+                  <img class="slide-circle" src="img/slide-circle.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide background-color-milck">
+                <div class="background-color-slide">
+                  <div class="slide-inner">
+                    <div
+                      class="main-fifth-container-slider-panel-container-star-container"
+                    >
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                    </div>
+                    <p class="quick lng-great-product">
+                      Great product, restores confidence and performance!
+                    </p>
+                  </div>
+                  <p class="Zander lng-francisr">Francisr</p>
+                  <img class="slide-circle" src="img/slide-circle.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide background-color-milck">
+                <div class="background-color-slide background-color-milck">
+                  <div class="slide-inner">
+                    <div
+                      class="main-fifth-container-slider-panel-container-star-container"
+                    >
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                    </div>
+                    <p class="quick lng-great-product-love">
+                      Great product love the smell and the feeling.
+                    </p>
+                  </div>
+                  <p class="Zander lng-simon">Simon</p>
+                  <img class="slide-circle" src="img/slide-circle.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide background-color-milck">
+                <div class="background-color-slide">
+                  <div class="slide-inner">
+                    <div
+                      class="main-fifth-container-slider-panel-container-star-container"
+                    >
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                    </div>
+                    <p class="quick lng-quick-and-discreet">
+                      Quick and discreet and saved me a trip to the GP.
+                    </p>
+                  </div>
+                  <p class="Zander lng-zander">Zander</p>
+                  <img class="slide-circle" src="img/slide-circle.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide background-color-milck">
+                <div class="background-color-slide">
+                  <div class="slide-inner">
+                    <div
+                      class="main-fifth-container-slider-panel-container-star-container"
+                    >
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                      <img src="img/Star.png" alt="" />
+                    </div>
+                    <p class="quick lng-great-product">
+                      Great product, restores confidence and performance!
+                    </p>
+                  </div>
+                  <p class="Zander lng-francisr">Francisr</p>
+                  <img class="slide-circle" src="img/slide-circle.png" alt="" />
+                </div>
+              </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-six-container">
+        <div class="main-six-container-inner-container">
+          <h2 class="lng-meet-our-medical">Meet our medical team</h2>
+          <p class="main-six-container-text lng-enabling-thi-mission">
+            Enabling the mission of revolutionising how men approach health,
+            they are at the core of the men’s wellness platform. Meet our team.
+          </p>
+          <div class="main-six-container-card-people-flex">
+            <div class="main-six-conainer-card-people-flex-container">
+              <div>
+                <img src="img/person-Earim.png" alt="" />
+                <p
+                  class="main-six-container-card-people-name lng-earim-chaudry"
+                >
+                  Earim Chaudry, MD
+                </p>
+                <p
+                  class="main-six-container-card-people-job-title lng-medical-director"
+                >
+                  Medical Director
+                </p>
+              </div>
+            </div>
+            <div class="main-six-conainer-card-people-flex-container">
+              <div>
+                <img src="img/person-Ryan.png" alt="" />
+                <p class="main-six-container-card-people-name lng-ryan-benbow">
+                  Ryan Benbow
+                </p>
+                <p
+                  class="main-six-container-card-people-job-title lng-pharmacist"
+                >
+                  Pharmacist, Ind. Prescriber
+                </p>
+              </div>
+            </div>
+            <div class="main-six-conainer-card-people-flex-container">
+              <div>
+                <img src="img/person-Soheb.png" alt="" />
+                <p class="main-six-container-card-people-name lng-soheb-ganchi">
+                  Soheb Ganchi
+                </p>
+                <p
+                  class="main-six-container-card-people-job-title lng-pharmacist"
+                >
+                  Pharmacist, Ind. Prescriber
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-six-container-Book-Consultation">
+            <div class="main-six-container-book-consultation-left-flex">
+              <img src="img/icon-telephone.png" alt="" />
+              <div>
+                <p
+                  class="main-six-container-Book-Consultation-text-main lng-get-free-consultation"
+                >
+                  Get a free consultation
+                </p>
+                <p
+                  class="main-six-container-Book-Consultation-text lng-speak-with-one"
+                >
+                  Speak with one of our clinicians and get personalised advice.
+                  Monday to Friday 9am-4:30pm
+                </p>
+              </div>
+            </div>
+            <button id="button-consultation">
+              <span class="lng-book-consultation">Book Consultation</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-seven-container">
+        <div class="main-seven-container-img-text">
+          <img src="img/seven-container-person.png" alt="" />
+          <div class="seven-text-container">
+            <p class="lng-its-put">
+              “It’s put a spark back into my relationship and given me a huge
+              amount of confidence in the bedroom.”
+            </p>
+            <p id="main-seven-container-text-signature lng-anthony">
+              Anthony, Trustpilot
+            </p>
+          </div>
+        </div>
+        <div class="main-seven-container-button">
+          <button><span class="lng-treat-ed">Treat Ed</span></button>
+          <button><span class="lng-treat-hair">Treat Hair Loss</span></button>
+        </div>
+      </section>
+
+      <section class="main-eight-container">
+        <h2 class="lng-guided">GUIDED</h2>
+        <p class="main-eight-container-text lng-own-personal-wellbeing">
+          Your own personal wellbeing guide. Experts, information and hot topics
+          right at your fingertips.
+        </p>
+
+        <div class="swiper-second swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="main-eight-container-card">
+                <img src="img/first_person.png" alt="" />
+                <p class="lng-why-do-men">Why do men fail at well-being?</p>
+                <div class="main-eight-container-card-read-more">
+                  <a class="read-more lng-read-more" href="">READ MORE</a>
+                  <div class="main-eight-container-card-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-eight-container-card">
+                <img src="img/second_person.png" alt="" />
+
+                <p class="lng-steps-to-prevent">8 steps to prevent hair loss</p>
+                <div class="main-eight-container-card-read-more">
+                  <a class="read-more lng-read-more" href="">READ MORE</a>
+                  <div class="main-eight-container-card-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-eight-container-card">
+                <img src="img/thrid_person.png" alt="" />
+                <p class="lng-erectile-dysfunction">Erectile Dysfunction 101</p>
+                <div class="main-eight-container-card-read-more">
+                  <a class="read-more lng-read-more" href="">READ MORE</a>
+                  <div class="main-eight-container-card-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-eight-container-card">
+                <img src="img/fourh_person.png" alt="" />
+                <p class="lng-lets-talk">
+                  Let’s talk hair – treatments and advice
+                </p>
+                <div class="main-eight-container-card-read-more">
+                  <a class="read-more lng-read-more" href="">READ MORE</a>
+                  <div class="main-eight-container-card-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-eight-container-card">
+                <img src="img/jar.png" alt="" />
+                <p class="lng-testosterone-support">Testosterone support 101</p>
+                <div class="main-eight-container-card-read-more">
+                  <a class="read-more lng-read-more" href="">READ MORE</a>
+                  <div class="main-eight-container-card-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-eight-container-card">
+                <img src="img/first_person.png" alt="" />
+                <p class="lng-why-do-men">Why do men fail at well-being?</p>
+                <div class="main-eight-container-card-read-more">
+                  <a class="read-more lng-read-more" href="">READ MORE</a>
+                  <div class="main-eight-container-card-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-eight-container-card">
+                <img src="img/second_person.png" alt="" />
+
+                <p class="lng-steps-to-prevent">8 steps to prevent hair loss</p>
+                <div class="main-eight-container-card-read-more">
+                  <a class="read-more lng-read-more" href="">READ MORE</a>
+                  <div class="main-eight-container-card-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-eight-container-card">
+                <img src="img/thrid_person.png" alt="" />
+                <p class="lng-erectile-dysfunction">Erectile Dysfunction 101</p>
+                <div class="main-eight-container-card-read-more">
+                  <a class="read-more lng-read-more" href="">READ MORE</a>
+                  <div class="main-eight-container-card-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-eight-container-card">
+                <img src="img/fourh_person.png" alt="" />
+                <p class="lng-lets-talk">
+                  Let’s talk hair – treatments and advice
+                </p>
+                <div class="main-eight-container-card-read-more">
+                  <a class="read-more lng-read-more" href="">READ MORE</a>
+                  <div class="main-eight-container-card-line"></div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="swiper-slide">
+              <div class="main-eight-container-card">
+                <img src="img/jar.png" alt="" />
+                <p class="lng-testosterone-support">Testosterone support 101</p>
+                <div class="main-eight-container-card-read-more">
+                  <a class="read-more lng-read-more" href="">READ MORE</a>
+                  <div class="main-eight-container-card-line"></div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-master-container">
+        <section class="footer-container">
+          <div class="footer-question-manual-learn-grid">
+            <div class="footer-question-manual-learn-left-div">
+              <h3 id="about" class="lng-have-question">Have a question?</h3>
+              <p class="footer-discription lng-whatever-it-is">
+                Whatever it is, get in touch:
+              </p>
+              <div class="footer-question-manual-learn-contacts">
+                <div class="footer-question-manual-learn-contacts-circle">
+                  <img src="img/phone.png" alt="" />
+                </div>
+                <div>
+                  <a class="phone-number-anchors" href="tel:+375256311645">
+                    <p class="phone-number">020 8004 7160</p>
+                  </a>
+                  <p class="time lng-mon-fri">Mon-Fri 9:00-17:30</p>
+                </div>
+              </div>
+              <div class="footer-question-manual-learn-contacts">
+                <div class="footer-question-manual-learn-contacts-circle">
+                  <img src="img/message.png" alt="" />
+                </div>
+                <div>
+                  <a href="mailto:help@manual.com" class="phone-number"
+                    >help@manual.com</a
+                  >
+                  <p class="time lng-we-aim-to">We aim to reply in 24hrs</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-question-manual-learn">
+              <div class="left-inform">
+                <p class="learn lng-learn">LEARN</p>
+                <ul>
+                  <li class="lng-erectile-dysfunction">Erectile Dysfunction</li>
+                  <li class="lng-hair">Hair Loss</li>
+                  <li class="lng-skin">Skin</li>
+                  <li class="lng-sex-health">Sexual Health</li>
+                  <li class="lng-masculinity">Masculinity</li>
+                </ul>
+              </div>
+              <div class="right-inform">
+                <p class="learn lng-manual">MANUAL</p>
+                <ul>
+                  <li class="lng-home">Home</li>
+                  <li class="lng-mission">Mission</li>
+                  <li class="lng-faq">FAQ</li>
+                  <li class="lng-medical-experts">Medical Experts</li>
+                  <li class="lng-success-stories">Success Stories</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <button
+                id="button-theme"
+                href="#"
+                class="btn-flip"
+                data-back="Theme"
+                data-front="
+              Switch"
+              ></button>
+              <select class="switch-lng">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+              </select>
+              <button id="map-button">
+                <img src="img/map-icon.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer-logo-social-net">
+          <img class="signature" src="img/signature-manual.png" alt="" />
+          <div class="social-net">
+            <div>
+              <img src="img/facebok.svg" alt="" />
+            </div>
+            <div>
+              <img src="img/twiter.png" alt="" />
+            </div>
+            <div>
+              <img src="img/instagram.png" alt="" />
+            </div>
+            <div>
+              <a href="https://github.com/MihailMakarenko"><img src="img/icons8-github.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-text-container">
+            <p class="lng-privacy-policy">Privacy Policy</p>
+            <p class="lng-terms-conditions">Terms & Conditions</p>
+            <p class="lng-terms-sale">Terms of Sale</p>
+            <p class="lng-complaints">Complaints</p>
+          </div>
+          <p class="footer-text-last lng-pharmacies">
+            Pharmacies: Manual Pharmacy
+          </p>
+          <p class="footer-text-last lng-copyright">
+            Copyright 2021 Manual™. All rights reserved.
+          </p>
+        </div>
+      </div>
+
+      <div id="blackOver-two"></div>
+      <div id="footer-map-container">
+        <div id="footer-map">
+          <button id="button-close" class="footer-button-close">
+            <span></span>
+            <span></span>
+          </button>
+          <div>
+            <script
+              type="text/javascript"
+              charset="utf-8"
+              async
+              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A00c2887efb6b65d15c7dccac852499c093e7159467700975991d4ca6626e15fd&amp;width=320&amp;height=320&amp;lang=ru_RU&amp;scroll=true"
+            ></script>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/Translate/lng_script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="/Translate/script_translate.js"></script>
+  </body>
+</html>

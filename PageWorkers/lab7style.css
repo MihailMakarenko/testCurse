@@ -1,0 +1,247 @@
+.header-button-burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  z-index: 11;
+}
+
+.blackOver {
+  display: none;
+}
+
+.header-button-burger span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+
+.header-button-burger span:nth-child(1) {
+  transform: translate(-50%, -10px);
+}
+
+.header-button-burger span:nth-child(3) {
+  transform: translate(-50%, 10px);
+}
+
+@media (max-width: 520px) {
+  .header-button-burger {
+    margin: auto;
+    display: block;
+  }
+
+  .header-inner-container-a {
+    position: absolute;
+    top: -210px;
+    width: 160px;
+    padding-top: 65px;
+    flex-direction: column;
+    background-color: blue;
+    transition: transform 0.5s;
+    z-index: 9;
+  }
+
+  .header-inner-container-a a {
+    color: white;
+    font-size: 16px;
+  }
+
+  .header-inner-3componnent.open .header-inner-container-a {
+    transform: translateY(100%);
+  }
+  .header-inner-3componnent.open .header-button-burger span {
+    background-color: white;
+  }
+
+  .header-inner-3componnent.open .header-button-burger span:nth-child(1) {
+    transform: translate(-50%, 0) rotate(45deg);
+  }
+  .header-inner-3componnent.open .header-button-burger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header-inner-3componnent.open .header-button-burger span:nth-child(3) {
+    transform: translate(-50%, 0) rotate(-45deg);
+  }
+
+  .header-inner-3componnent.open .blackOver {
+    display: block;
+    border: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+    background: #0000005e;
+    left: 0;
+    top: 0;
+    z-index: 8;
+  }
+
+  body.body-scroll {
+    overflow: hidden;
+  }
+}
+
+.img-slider .swiper-pagination {
+  background-image: url(images/Group1300.png);
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: darkblue;
+}
+
+.swiper-pagination {
+  position: relative;
+}
+
+.map {
+  max-width: 320px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.audio-palyer {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.button-start-music {
+  width: 100px;
+  height: 20px;
+}
+
+.button-stop-music {
+  width: 100px;
+  height: 20px;
+}
+
+.menu {
+  max-width: 178px;
+  height: 50px;
+  margin: 70px auto;
+}
+
+.drop-down-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.drop-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.drop-down-menu:hover .dropdown-content {
+  display: block;
+}
+.drop-button:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+.square-animation {
+  animation: wipe-enter 2s 1;
+}
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0, 0.025);
+  }
+  50% {
+    transform: scale(1, 0.025);
+  }
+}
+
+.wrap {
+  display: flex;
+}
+.stage {
+  position: relative;
+}
+.stage,
+.stage-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stage-footer {
+  margin: 10px;
+}
+
+.button-music {
+  display: block;
+  width: 150px;
+  height: 20px;
+  margin: auto;
+  background-color: #4caf50; /* Зеленый */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+
+#myImage {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "idItem": "item1",
+    "name": "Азитромицин",
+    "discription": "6 таблеток, 250мг",
+    "price": "10",
+    "type": "Таблетки",
+    "img_path": "img-medicines/eight-medicamets.png"
+  },
+  {
+    "idItem": "item2",
+    "name": "Азикар",
+    "discription": "6 капсул, 250мг",
+    "price": "12",
+    "type": "Таблетки",
+    "img_path": "img-medicines/eleven-medicaments.png"
+  },
+  {
+    "idItem": "item3",
+    "name": "Экзофорт",
+    "discription": "лечение грибка, 10мг",
+    "price": "15",
+    "type": "Мазь",
+    "img_path": "img-medicines/fifteen.png"
+  },
+  {
+    "idItem": "item4",
+    "name": "Ривароксабан",
+    "discription": "30 таблеток",
+    "price": "20",
+    "type": "Таблетки",
+    "img_path": "img-medicines/first-medicamets.png"
+  },
+  {
+    "idItem": "item5",
+    "name": "Ксарива",
+    "discription": "30 таблеток, 15 мг",
+    "price": "22",
+    "type": "Таблетки",
+    "img_path": "img-medicines/five-medicamets.png"
+  },
+  {
+    "idItem": "item6",
+    "name": "Риваксоред",
+    "discription": "28 таблеток, 20 мг",
+    "price": "22",
+    "type": "Таблетки",
+    "img_path": "img-medicines/four-medicamets.png"
+  },
+  {
+    "idItem": "item7",
+    "name": "Экзодерил",
+    "discription": "Раствор 30мл",
+    "price": "10",
+    "type": "Спрей",
+    "img_path": "img-medicines/fourteen-medicaments.png"
+  },
+  {
+    "idItem": "item8",
+    "name": "Азитромицин",
+    "discription": "6 таблеток, 250 мг",
+    "price": "33",
+    "type": "Таблетки",
+    "img_path": "img-medicines/nine-medicamets.png"
+  },
+  {
+    "idItem": "item9",
+    "name": "Ксалерто",
+    "discription": "28 таблеток, 15 мг",
+    "price": "33",
+    "type": "Таблетки",
+    "img_path": "img-medicines/second-medicamets.png"
+  },
+  {
+    "idItem": "item10",
+    "name": "Адицеф",
+    "discription": "10 капсул",
+    "price": "66",
+    "type": "Таблетки",
+    "img_path": "img-medicines/six-medicamets.png"
+  },
+  {
+    "idItem": "item11",
+    "name": "Азитромицин",
+    "discription": "Антибактериальная мазь",
+    "price": "11",
+    "type": "Мазь",
+    "img_path": "img-medicines/ten-medicamets.png"
+  },
+  {
+    "idItem": "item12",
+    "name": "Фунгилам",
+    "discription": "С эфкалиптом 10мг/мл",
+    "price": "30",
+    "type": "Мазь",
+    "img_path": "img-medicines//thirteen.png"
+  },
+  {
+    "idItem": "item13",
+    "name": "Риваксан",
+    "discription": "30 таблеток, 20 мг",
+    "price": "40",
+    "type": "Таблетки",
+    "img_path": "img-medicines/thrid-medicamets.png"
+  },
+  {
+    "idItem": "item14",
+    "name": "Зиматак",
+    "discription": "6 таблеток, 500мг",
+    "price": "78",
+    "type": "Таблетки",
+    "img_path": "img-medicines/twelve-medicamets.png"
+  },
+  {
+    "idItem": "item15",
+    "name": "Аквалор",
+    "discription": "Спрей 150мл",
+    "price": "30",
+    "type": "Спрей",
+    "img_path": "img-medicines/sprei1.png"
+  },
+  {
+    "idItem": "item16",
+    "name": "Нанолар",
+    "discription": "25мл, вишня",
+    "price": "22,2",
+    "type": "Спрей",
+    "img_path": "img-medicines/sprei2.png"
+  }
+]

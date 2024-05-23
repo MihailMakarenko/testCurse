@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link type="image/x-icon" href="/favicon.png" rel="shortcut icon" />
+    <title>Autorization</title>
+    <link rel="stylesheet" href="/MainPage/Cursach.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <div class="header-container">
+        <button class="lng-header-back" id="header-main-page" onclick="back()">
+          Back
+        </button>
+        <div class="central-img">
+          <svg
+            id="manula-color"
+            class="manual"
+            xmlns="http://www.w3.org/2000/svg"
+            width="176"
+            height="44"
+            viewBox="0 0 176 44"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M43.3736 5.00159L31.8604 37.1797H35.2735L38.4262 28.1712H51.2306L54.4156 37.1797H57.8287L46.3154 5.00159H43.3736ZM44.7961 9.97094L49.7834 24.0779H39.8594L44.7961 9.97254V9.97094ZM132.832 5.00159L121.318 37.1797H124.731L127.884 28.1712H140.688L143.873 37.1797H147.286L135.773 5.00159H132.832ZM134.254 9.97094L139.242 24.0779H129.317L134.254 9.97254V9.97094ZM153.346 5.00159V37.1797H172V32.9638H156.514V5.00159H153.346ZM83.3008 5.00159V30.9776L66.7412 5H63.8887V37.1797H66.9069V11.2977L83.4128 37.1797H86.319V5.00159H83.3008ZM113.891 23.0601C113.891 30.5109 110.487 33.7904 105.928 33.7904C101.369 33.7904 97.9657 30.5093 97.9657 23.0601V5H94.7979V23.0059C94.7979 33.3699 99.4 38 105.928 38C112.456 38 117.058 33.3699 117.058 23.0059V5H113.891V23.0601ZM12.9002 21.3511L2.85248 5H0V37.1797H3.01819V11.2977L12.9002 27.3143L22.7811 11.2961V37.1797H25.8004V5.00159H22.9479L12.9002 21.3511Z"
+            />
+          </svg>
+        </div>
+        <button class="lng-header-home" id="header-home-page" onclick="goHome()">Home</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="container-inner">
+          <h1 class="lng-enter">Enter</h1>
+          <input id="login" type="tel" placeholder="Phone, email or nickname" />
+          <span class="lng-Obligatory">Obligatory field</span>
+          <input id="password" type="password" placeholder="Password" />
+          <span class="lng-Obligatory">Obligatory field</span>
+          <button class="styleButton lng-log-in" id="logIn" >Log in</button>
+          <button class="styleButton lng-registration" id="Registration">Registration</button>
+        </div>
+        <div id="myModal">
+          <div id="myModalContainer">
+            <p id="textModal" class="error-message">Ошибка, неправильно введен логин или пароль, пожалуйста повторите попытку</p>
+            <button id="button-ok">Ok</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-master-container">
+        <section class="footer-container">
+          <div class="footer-question-manual-learn-grid">
+            <div class="footer-question-manual-learn-left-div">
+              <h3 id="about" class="lng-have-question">Have a question?</h3>
+              <p class="footer-discription lng-whatever-it-is">
+                Whatever it is, get in touch:
+              </p>
+              <div class="footer-question-manual-learn-contacts">
+                <div class="footer-question-manual-lefarn-contacts-circle">
+                  <img src="/MainPage/img/phone.png" alt="" />
+                </div>
+                <div>
+                  <a class="phone-number-anchors" href="tel:+375256311645">
+                    <p class="phone-number">020 8004 7160</p>
+                  </a>
+                  <p class="time lng-mon-fri">Mon-Fri 9:00-17:30</p>
+                </div>
+              </div>
+              <div class="footer-question-manual-learn-contacts">
+                <div class="footer-question-manual-learn-contacts-circle">
+                  <img src="/MainPage/img/message.png" alt="" />
+                </div>
+                <div>
+                  <a href="mailto:help@manual.com" class="phone-number"
+                    >help@manual.com</a
+                  >
+                  <p class="time lng-we-aim-to">We aim to reply in 24hrs</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-question-manual-learn">
+              <div class="left-inform">
+                <p class="learn lng-learn">LEARN</p>
+                <ul>
+                  <li class="lng-erectile-dysfunction">Erectile Dysfunction</li>
+                  <li class="lng-hair">Hair Loss</li>
+                  <li class="lng-skin">Skin</li>
+                  <li class="lng-sex-health">Sexual Health</li>
+                  <li class="lng-masculinity">Masculinity</li>
+                </ul>
+              </div>
+              <div class="right-inform">
+                <p class="learn lng-manual">MANUAL</p>
+                <ul>
+                  <li class="lng-home">Home</li>
+                  <li class="lng-mission">Mission</li>
+                  <li class="lng-faq">FAQ</li>
+                  <li class="lng-medical-experts">Medical Experts</li>
+                  <li class="lng-success-stories">Success Stories</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <button
+                id="button-theme"
+                href="#"
+                class="btn-flip"
+                data-back="Theme"
+                data-front="
+              Switch"
+              ></button>
+              <select class="switch-lng">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer-logo-social-net">
+          <img
+            class="signature"
+            src="/MainPage/img/signature-manual.png"
+            alt=""
+          />
+          <div class="social-net">
+            <div>
+              <img src="/MainPage/img/facebok.svg" alt="" />
+            </div>
+            <div>
+              <img src="/MainPage/img/twiter.png" alt="" />
+            </div>
+            <div>
+              <img src="/MainPage/img/instagram.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-text-container">
+            <p class="lng-privacy-policy">Privacy Policy</p>
+            <p class="lng-terms-conditions">Terms & Conditions</p>
+            <p class="lng-terms-sale">Terms of Sale</p>
+            <p class="lng-complaints">Complaints</p>
+          </div>
+          <p class="footer-text-last lng-pharmacies">
+            Pharmacies: Manual Pharmacy
+          </p>
+          <p class="footer-text-last lng-copyright">
+            Copyright 2021 Manual™. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="/Translate/lng_script.js"></script>
+    <script src="/Translate/script_translate.js"></script>
+  </body>
+</html>

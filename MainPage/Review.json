@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Smith",
+    "review": "The product exceeded all my expectations. I definitely recommend it!",
+    "id": "1"
+  },
+  {
+    "name": "Johnson",
+    "review": "Excellent service and fast delivery. I'm very satisfied with my purchase.",
+    "id": "2"
+  },
+  {
+    "name": "Williams",
+    "review": "The quality is top-notch. It's worth every penny.",
+    "id": "3"
+  },
+  {
+    "name": "Brown",
+    "review": "I had an issue, but customer service resolved it quickly. Great company to deal with.",
+    "id": "4"
+  },
+  {
+    "name": "Jones",
+    "review": "The item arrived on time and was well packaged. I would order from them again.",
+    "id": "5"
+  },
+  {
+    "name": "Miller",
+    "review": "The design is sleek and modern. It fits perfectly in my space.",
+    "id": "6"
+  },
+  {
+    "name": "Davis",
+    "review": "Easy to use and does exactly what it promises. Highly recommended!",
+    "id": "7"
+  },
+  {
+    "name": "Garcia",
+    "review": "I've been using it for a month and it's still working great. Very durable and reliable.",
+    "id": "8"
+  },
+  {
+    "name": "Rodriguez",
+    "review": "It's a game changer. It has made my life so much easier.",
+    "id": "9"
+  },
+  {
+    "name": "Wilson",
+    "review": "It's a bit pricey, but you get what you pay for. The quality is outstanding.",
+    "id": "10"
+  }
+]

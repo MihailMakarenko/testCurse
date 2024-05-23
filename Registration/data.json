@@ -1,0 +1,100 @@
+[
+  {
+    "phone": "+375(25)105-95-44",
+    "email": "почта2@mail.ru",
+    "birthday": "30.12.2000",
+    "firstName": "имя2",
+    "secondName": "фамилия2",
+    "LastName": "отчество2",
+    "nickname": "ифо2",
+    "password": "222@@WWww",
+    "isAdmin": false,
+    "iconSrc": "/Registration/PersonIcon/free-icon-female-9717917.png"
+  },
+  {
+    "phone": "+375(25)999-99-99",
+    "email": "почта1@mail.ru",
+    "birthday": "31.12.2005",
+    "firstName": "имя1",
+    "secondName": "фамилия1",
+    "LastName": "отчество1",
+    "nickname": "ифо1",
+    "password": "111!!QQqq",
+    "isAdmin": true,
+    "iconSrc": "/Registration/PersonIcon/free-icon-interview-2179306.png"
+  },
+
+  {
+    "phone": "+375(25)333-33-22",
+    "email": "pocta3@mail.ru",
+    "birthday": "31.12.2006",
+    "firstName": "имя3",
+    "secondName": "фамилия3",
+    "LastName": "",
+    "nickname": "иф3",
+    "password": "333##FFff",
+    "isAdmin": false,
+    "iconSrc": "/Registration/PersonIcon/free-icon-interview-2179397.png"
+  },
+  {
+    "phone": "+375(25)415-88-46",
+    "email": "pocta4@mail.ru",
+    "birthday": "31.12.2001",
+    "firstName": "имя4",
+    "secondName": "фамилия4",
+    "LastName": "",
+    "nickname": "иф4",
+    "password": "444;;PPpp",
+    "isAdmin": false,
+    "iconSrc": "/Registration/PersonIcon/free-icon-man-1435370.png"
+  },
+
+  {
+    "phone": "+375(25)105-95-44",
+    "email": "почта5@mail.ru",
+    "birthday": "30.12.2000",
+    "firstName": "имя5",
+    "secondName": "фамилия5",
+    "LastName": "отчество5",
+    "nickname": "ифо5",
+    "password": "222@@WWww",
+    "isAdmin": false,
+    "iconSrc": "/Registration/PersonIcon/free-icon-single-person-5231019.png"
+  },
+  {
+    "phone": "+375(25)999-99-99",
+    "email": "почта6@mail.ru",
+    "birthday": "31.12.2005",
+    "firstName": "имя6",
+    "secondName": "фамилия6",
+    "LastName": "отчество6",
+    "nickname": "ифо6",
+    "password": "111!!QQqq",
+    "isAdmin": true,
+    "iconSrc": "/Registration/PersonIcon/free-icon-single-person-5521372.png"
+  },
+
+  {
+    "phone": "+375(25)333-33-22",
+    "email": "pocta7@mail.ru",
+    "birthday": "31.12.2006",
+    "firstName": "имя7",
+    "secondName": "фамилия7",
+    "LastName": "",
+    "nickname": "иф7",
+    "password": "333##FFff",
+    "isAdmin": false,
+    "iconSrc": "/Registration/PersonIcon/free-icon-single-person-5526473.png"
+  },
+  {
+    "phone": "+375(25)415-88-46",
+    "email": "pocta8@mail.ru",
+    "birthday": "31.12.2001",
+    "firstName": "имя8",
+    "secondName": "фамилия8",
+    "LastName": "",
+    "nickname": "иф8",
+    "password": "444;;PPpp",
+    "isAdmin": false
+  }
+]

@@ -1,0 +1,250 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link type="image/x-icon" href="/favicon.png" rel="shortcut icon" />
+    <title class="lng-catalog">Catalog</title>
+    <link rel="stylesheet" href="/MainPage/Cursach.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <section>
+        <div class="header-catalog">
+          <div id="header-block-menu">
+            <button id="button-catalog">
+              <img src="img/menu.svg" alt="" />
+            </button>
+            <p class="lng-catalog">Catalog</p>
+          </div>
+          <div id="header-menu">
+            <ul>
+              <li id="tablets" class="lng-pills">Pills</li>
+              <li id="spray" class="lng-sprays">Sprays</li>
+              <li id="ointment" class="lng-ointment">Ointment</li>
+            </ul>
+          </div>
+        </div>
+        <button
+          class="lng-header-home"
+          id="header-home-page"
+          onclick="goHome()"
+        >
+          Home
+        </button>
+        <div id="input-button-container">
+          <input id="header-search" type="search" placeholder="Search" />
+          <button id="button-search">
+            <img src="img/search.svg" alt="" />
+          </button>
+          <button id="cancel-search">
+            <img src="img/button-cancel.png" alt="" />
+          </button>
+        </div>
+        <div class="header-information">
+          <div class="shopping-cart-container">
+            <div id="circle"><p id="circle-text">0</p></div>
+            <img id="shopping_cart" src="img/shopping_cart.svg" alt="" />
+            <p id="header-basket" class="lng-basket">Basket</p>
+          </div>
+
+          <div id="header-sign-in">
+            <a href="/Autorization//index.html" id="header-siqn-in">
+              <p class="lng-sign-in">Sign-in</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.5 2C13.5 1.72386 13.7239 1.5 14 1.5H19C20.3807 1.5 21.5 2.61929 21.5 4V20C21.5 21.3807 20.3807 22.5 19 22.5H14C13.7239 22.5 13.5 22.2761 13.5 22C13.5 21.7239 13.7239 21.5 14 21.5H19C19.8284 21.5 20.5 20.8284 20.5 20V4C20.5 3.17157 19.8284 2.5 19 2.5H14C13.7239 2.5 13.5 2.27614 13.5 2Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.6464 7.64645C10.8417 7.45118 11.1583 7.45118 11.3536 7.64645L15.3536 11.6464C15.5488 11.8417 15.5488 12.1583 15.3536 12.3536L11.3536 16.3536C11.1583 16.5488 10.8417 16.5488 10.6464 16.3536C10.4512 16.1583 10.4512 15.8417 10.6464 15.6464L14.2929 12L10.6464 8.35355C10.4512 8.15829 10.4512 7.84171 10.6464 7.64645Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2.5 12C2.5 11.7239 2.72386 11.5 3 11.5H15C15.2761 11.5 15.5 11.7239 15.5 12C15.5 12.2761 15.2761 12.5 15 12.5H3C2.72386 12.5 2.5 12.2761 2.5 12Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="header-person-icon">
+            <img src="" alt="" />
+            <div class="header-person-icon-information">
+              <div class="header-person-icon-information-container">
+                <div>
+                  <span class="lng-nickname-table">Nickname:</span>
+                  <span id="nickName-person"></span>
+                </div>
+                <div>
+                  <span class="lng-first-name-table">Name:</span>
+                  <span id="name-person"></span>
+                </div>
+                <div>
+                  <span class="lng-email-table">Email:</span>
+                  <span id="email-person"></span>
+                </div>
+                <div>
+                  <span class="lng-phone-table">Телефон:</span>
+                  <span id="phone-person"></span>
+                </div>
+                <button id="button-exit" class="lng-Exit" onclick="exit()">Выйти</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section class="section-container">
+        <div class="section-container-inner" id="section-contriner-id">
+          <div class="section-inner-information">
+            <h1 class="lng-our-product theme-pagination">
+              Our product catalog
+            </h1>
+            <div class="container-pagination">
+              <button id="first-page-button" class="theme-pagination">
+                <<
+              </button>
+              <button id="previous-page-button" class="theme-pagination">
+                <
+              </button>
+              <p id="number_page" class="theme-pagination">1</p>
+              <button id="next-page-button" class="theme-pagination">></button>
+              <button id="last-page-button" class="theme-pagination">>></button>
+            </div>
+            <div id="card-flex-conainer"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="message-user-not-defined">
+        <span class="close">&times;</span>
+        <p class="lng-you-must-be">You must be logged in before adding to cart.</p>
+      </section>
+      <section id="message-user-not-defined-black"></section>
+    </main>
+    <footer>
+      <div class="footer-master-container">
+        <section class="footer-container">
+          <div class="footer-question-manual-learn-grid">
+            <div class="footer-question-manual-learn-left-div">
+              <h3 id="about" class="lng-have-question">Have a question?</h3>
+              <p class="footer-discription lng-whatever-it-is">
+                Whatever it is, get in touch:
+              </p>
+              <div class="footer-question-manual-learn-contacts">
+                <div class="footer-question-manual-lefarn-contacts-circle">
+                  <img src="/MainPage/img/phone.png" alt="" />
+                </div>
+                <div>
+                  <a class="phone-number-anchors" href="tel:+375256311645">
+                    <p class="phone-number">020 8004 7160</p>
+                  </a>
+                  <p class="time lng-mon-fri">Mon-Fri 9:00-17:30</p>
+                </div>
+              </div>
+              <div class="footer-question-manual-learn-contacts">
+                <div class="footer-question-manual-learn-contacts-circle">
+                  <img src="/MainPage/img/message.png" alt="" />
+                </div>
+                <div>
+                  <a href="mailto:help@manual.com" class="phone-number"
+                    >help@manual.com</a
+                  >
+                  <p class="time lng-we-aim-to">We aim to reply in 24hrs</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-question-manual-learn">
+              <div class="left-inform">
+                <p class="learn lng-learn">LEARN</p>
+                <ul>
+                  <li class="lng-erectile-dysfunction">Erectile Dysfunction</li>
+                  <li class="lng-hair">Hair Loss</li>
+                  <li class="lng-skin">Skin</li>
+                  <li class="lng-sex-health">Sexual Health</li>
+                  <li class="lng-masculinity">Masculinity</li>
+                </ul>
+              </div>
+              <div class="right-inform">
+                <p class="learn lng-manual">MANUAL</p>
+                <ul>
+                  <li class="lng-home">Home</li>
+                  <li class="lng-mission">Mission</li>
+                  <li class="lng-faq">FAQ</li>
+                  <li class="lng-medical-experts">Medical Experts</li>
+                  <li class="lng-success-stories">Success Stories</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <button
+                id="button-theme"
+                href="#"
+                class="btn-flip"
+                data-back="Theme"
+                data-front="
+              Switch"
+              ></button>
+              <select class="switch-lng">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer-logo-social-net">
+          <img
+            class="signature"
+            src="/MainPage/img/signature-manual.png"
+            alt=""
+          />
+          <div class="social-net">
+            <div>
+              <img src="/MainPage/img/facebok.svg" alt="" />
+            </div>
+            <div>
+              <img src="/MainPage/img/twiter.png" alt="" />
+            </div>
+            <div>
+              <img src="/MainPage/img/instagram.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-text-container">
+            <p class="lng-privacy-policy">Privacy Policy</p>
+            <p class="lng-terms-conditions">Terms & Conditions</p>
+            <p class="lng-terms-sale">Terms of Sale</p>
+            <p class="lng-complaints">Complaints</p>
+          </div>
+          <p class="footer-text-last lng-pharmacies">
+            Pharmacies: Manual Pharmacy
+          </p>
+          <p class="footer-text-last lng-copyright">
+            Copyright 2021 Manual™. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="/Translate/lng_script.js"></script>
+    <script src="/Translate/script_translate.js"></script>
+  </body>
+</html>
