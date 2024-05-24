@@ -82,7 +82,7 @@ window.onload = function () {
 };
 
 function back() {
-  window.location.href = "/index.html";
+  window.location.href = "index.html";
 }
 
 document.getElementById("button-theme").onclick = function (e) {

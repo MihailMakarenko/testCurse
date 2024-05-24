@@ -16,7 +16,7 @@ let buttonRegistration = document.getElementById(
 // маска ввода для телефона
 let usersArray = [];
 function getUsers() {
-  fetch("data.json")
+  fetch("Registration/data.json")
     .then((response) => response.json())
     .then((users) => {
       // console.log(users);
@@ -519,7 +519,7 @@ buttonRegistration.onclick = function (e) {
 document.getElementById("button-continue").onclick = function (e) {
   sessionStorage.setItem("current-user", JSON.stringify(Person));
   console.log(sessionStorage);
-  window.location.href = "/index.html";
+  window.location.href = "index.html";
 };
 
 document.getElementById("button-exit").onclick = function (e) {
@@ -530,7 +530,7 @@ document.getElementById("button-exit").onclick = function (e) {
 console.log(document.getElementById("Enter"));
 document.getElementById("Enter").onclick = function (e) {
   console.log("rstrst");
-  window.location.href = "/Autorization/index.html";
+  window.location.href = "Autorization.html";
 };
 
 document.getElementById("button-theme").onclick = function (e) {
@@ -553,7 +553,7 @@ function changeTheme() {
 }
 
 function goHome() {
-  window.location.href = "/index.html";
+  window.location.href = "index.html";
 }
 
 function back() {

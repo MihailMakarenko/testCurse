@@ -18,7 +18,7 @@ let button_cancle = document.getElementById("cancel-search");
 async function getCards() {
   let CardArray;
   try {
-    const response = await fetch("medicines.json");
+    const response = await fetch("Catalog/medicines.json");
     const card = await response.json();
     CardArray = card;
   } catch (error) {
@@ -542,7 +542,7 @@ function changeTheme() {
 }
 
 function goHome() {
-  window.location.href = "/index.html";
+  window.location.href = "index.html";
 }
 
 function exit() {

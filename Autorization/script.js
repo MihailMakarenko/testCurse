@@ -27,7 +27,7 @@ document.getElementById("logIn").onclick = function (e) {
           if (document.referrer != null) {
             if (
               document.referrer.substring(23, document.referrer.length) ==
-              "Autorization/index.html"
+              "Autorization.html"
             ) {
               sessionStorage.setItem(
                 "current-user",
@@ -97,7 +97,7 @@ function changeSpan(element) {
 }
 
 document.getElementById("Registration").onclick = function (e) {
-  window.location.href = "Registration/index.html";
+  window.location.href = "Registration.html";
 };
 
 if (localStorage.getItem("dark")) {

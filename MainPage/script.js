@@ -132,9 +132,9 @@ function goPage(number) {
   console.log(JSON.parse(sessionStorage.getItem("current-user")));
   if (currentUser != null && currentUser.isAdmin == true) {
     if (number == 0) {
-      window.location.href = "PageWorkers/index.html";
+      window.location.href = "PageWorkers.html";
     } else {
-      window.location.href = "Adminpanel/index.html";
+      window.location.href = "Adminpanel.html";
     }
   }
 }
