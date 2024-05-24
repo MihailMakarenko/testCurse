@@ -43,7 +43,7 @@ document.getElementById("logIn").onclick = function (e) {
                   ]
                 )
               );
-              window.location.href = "/index.html";
+              window.location.href = "index.html";
             } else {
               sessionStorage.setItem(
                 "current-user",
@@ -64,7 +64,7 @@ document.getElementById("logIn").onclick = function (e) {
 
             // sessionStorage.setItem("current-user");
           } else {
-            window.location.href = "/index.html";
+            window.location.href = "index.html";
           }
         } else {
           document.getElementById("myModal").style.display = "block";
@@ -97,7 +97,7 @@ function changeSpan(element) {
 }
 
 document.getElementById("Registration").onclick = function (e) {
-  window.location.href = "/Registration/index.html";
+  window.location.href = "Registration/index.html";
 };
 
 if (localStorage.getItem("dark")) {
@@ -120,7 +120,7 @@ document.getElementById("button-theme").onclick = function (e) {
 };
 
 function goHome() {
-  window.location.href = "/index.html";
+  window.location.href = "index.html";
 }
 
 function back() {
