@@ -542,7 +542,7 @@ function changeTheme() {
 }
 
 function goHome() {
-  window.location.href = "/MainPage/index.html";
+  window.location.href = "/index.html";
 }
 
 function exit() {

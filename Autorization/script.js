@@ -1,18 +1,3 @@
-// let arrayUsers = getUsers();
-// function getUsers() {
-//   fetch("/Registration/data.json")
-//     .then((response) => response.json())
-//     .then((users) => {
-//       // console.log(users);
-//       sessionStorage.setItem("users", JSON.stringify(users));
-//       console.log(sessionStorage);
-//       return (usersArray = users);
-//     })
-//     .catch((error) => {
-//       console.error("Ошибка при получениипользователей", error);
-//     });
-// }
-
 window.onload = function () {
   TranslateElement();
 };
@@ -58,7 +43,7 @@ document.getElementById("logIn").onclick = function (e) {
                   ]
                 )
               );
-              window.location.href = "/MainPage/index.html";
+              window.location.href = "/index.html";
             } else {
               sessionStorage.setItem(
                 "current-user",
@@ -79,7 +64,7 @@ document.getElementById("logIn").onclick = function (e) {
 
             // sessionStorage.setItem("current-user");
           } else {
-            window.location.href = "/MainPage/index.html";
+            window.location.href = "/index.html";
           }
         } else {
           document.getElementById("myModal").style.display = "block";
@@ -135,7 +120,7 @@ document.getElementById("button-theme").onclick = function (e) {
 };
 
 function goHome() {
-  window.location.href = "/MainPage/index.html";
+  window.location.href = "/index.html";
 }
 
 function back() {

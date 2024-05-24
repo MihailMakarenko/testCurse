@@ -132,9 +132,9 @@ function goPage(number) {
   console.log(JSON.parse(sessionStorage.getItem("current-user")));
   if (currentUser != null && currentUser.isAdmin == true) {
     if (number == 0) {
-      window.location.href = "/PageWorkers/index.html";
+      window.location.href = "PageWorkers/index.html";
     } else {
-      window.location.href = "/Adminpanel/index.html";
+      window.location.href = "Adminpanel/index.html";
     }
   }
 }
@@ -150,11 +150,11 @@ function generateHTMLBlocks(dataArray) {
         <div
           class="main-fifth-container-slider-panel-container-star-container"
         >
-          <img src="img/Star.png" alt="" />
-          <img src="img/Star.png" alt="" />
-          <img src="img/Star.png" alt="" />
-          <img src="img/Star.png" alt="" />
-          <img src="img/Star.png" alt="" />
+          <img src="MainPage/img/Star.png" alt="" />
+          <img src="MainPage/img/Star.png" alt="" />
+          <img src="MainPage/img/Star.png" alt="" />
+          <img src="MainPage/img/Star.png" alt="" />
+          <img src="MainPage/img/Star.png" alt="" />
         </div>
         <p id="lng-review-${data.id}" class="quick lng-great-product-love">
           ${data.review}

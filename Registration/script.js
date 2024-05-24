@@ -519,7 +519,7 @@ buttonRegistration.onclick = function (e) {
 document.getElementById("button-continue").onclick = function (e) {
   sessionStorage.setItem("current-user", JSON.stringify(Person));
   console.log(sessionStorage);
-  window.location.href = "/MainPage/index.html";
+  window.location.href = "/index.html";
 };
 
 document.getElementById("button-exit").onclick = function (e) {
@@ -553,7 +553,7 @@ function changeTheme() {
 }
 
 function goHome() {
-  window.location.href = "/MainPage/index.html";
+  window.location.href = "/index.html";
 }
 
 function back() {
