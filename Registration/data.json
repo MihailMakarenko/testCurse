@@ -9,7 +9,7 @@
     "nickname": "ифо2",
     "password": "222@@WWww",
     "isAdmin": false,
-    "iconSrc": "/Registration/PersonIcon/free-icon-female-9717917.png"
+    "iconSrc": "Registration/PersonIcon/free-icon-female-9717917.png"
   },
   {
     "phone": "+375(25)999-99-99",
@@ -21,7 +21,7 @@
     "nickname": "ифо1",
     "password": "111!!QQqq",
     "isAdmin": true,
-    "iconSrc": "/Registration/PersonIcon/free-icon-interview-2179306.png"
+    "iconSrc": "Registration/PersonIcon/free-icon-interview-2179306.png"
   },
 
   {
@@ -34,7 +34,7 @@
     "nickname": "иф3",
     "password": "333##FFff",
     "isAdmin": false,
-    "iconSrc": "/Registration/PersonIcon/free-icon-interview-2179397.png"
+    "iconSrc": "Registration/PersonIcon/free-icon-interview-2179397.png"
   },
   {
     "phone": "+375(25)415-88-46",
@@ -46,7 +46,7 @@
     "nickname": "иф4",
     "password": "444;;PPpp",
     "isAdmin": false,
-    "iconSrc": "/Registration/PersonIcon/free-icon-man-1435370.png"
+    "iconSrc": "Registration/PersonIcon/free-icon-man-1435370.png"
   },
 
   {
@@ -59,7 +59,7 @@
     "nickname": "ифо5",
     "password": "222@@WWww",
     "isAdmin": false,
-    "iconSrc": "/Registration/PersonIcon/free-icon-single-person-5231019.png"
+    "iconSrc": "Registration/PersonIcon/free-icon-single-person-5231019.png"
   },
   {
     "phone": "+375(25)999-99-99",
@@ -71,7 +71,7 @@
     "nickname": "ифо6",
     "password": "111!!QQqq",
     "isAdmin": true,
-    "iconSrc": "/Registration/PersonIcon/free-icon-single-person-5521372.png"
+    "iconSrc": "Registration/PersonIcon/free-icon-single-person-5521372.png"
   },
 
   {
@@ -84,7 +84,7 @@
     "nickname": "иф7",
     "password": "333##FFff",
     "isAdmin": false,
-    "iconSrc": "/Registration/PersonIcon/free-icon-single-person-5526473.png"
+    "iconSrc": "Registration/PersonIcon/free-icon-single-person-5526473.png"
   },
   {
     "phone": "+375(25)415-88-46",
