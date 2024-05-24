@@ -155,7 +155,7 @@ function validateBirthday(Birthday) {
   let ageDate = new Date(age);
   let years = Math.abs(ageDate.getUTCFullYear() - 1970);
   console.log(years > 16);
-  return years > 16;
+  return years >= 16;
 }
 birthdayInput.onkeyup = function (e) {
   let isBerthdayValid = validateBirthday(birthdayInput.value);

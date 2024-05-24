@@ -220,16 +220,19 @@ $speed: 0.5s;
   text-transform: uppercase;
   border: none;
   
+  
   &:hover{
     
     &:after{
       opacity: 1;
       transform: translateY(0) rotateX(0);
+      border: none;
     }
     
     &:before{
       opacity: 0;
       transform: translateY(50%) rotateX(90deg);
+      border: none;
     }
   }
   
@@ -246,6 +249,7 @@ $speed: 0.5s;
     color: #adadaf;
     content: attr(data-back);
     transform: translateY(-50%) rotateX(90deg);
+    border: none;
   }
   
   &:before{
@@ -262,6 +266,7 @@ $speed: 0.5s;
     color: #323237;
     content: attr(data-front);
     transform: translateY(0) rotateX(0);
+    border: none;
   }
 }
 #map-button{

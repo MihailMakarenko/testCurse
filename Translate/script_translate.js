@@ -27,6 +27,13 @@ function changeLanguage() {
     location.href = window.location.pathname + "#en";
   }
 
+  // document.querySelector(".switch-lng").value = hash;
+  // document.querySelector(".switch-lng").textContent = hash;
+  // console.log(document.querySelector(".switch-lng").textContent);
+  // console.log(document.querySelector(".switch-lng").value);
+
+  // document.querySelector(".switch-lng").dispatchEvent(new Event("change"));
+
   select.value = hash;
   console.log(select.value);
   console.log(LanguagesArr);
@@ -41,8 +48,6 @@ function changeLanguage() {
       }
     }
   }
-  // location.reload();
-  // localStorage.setItem("language", hash);
 }
 
 changeLanguage();

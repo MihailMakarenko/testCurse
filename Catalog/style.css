@@ -59,6 +59,7 @@ header section {
 }
 
 #header-menu {
+  z-index: 5;
   position: absolute;
   display: none;
   /* bottom: -20px; */

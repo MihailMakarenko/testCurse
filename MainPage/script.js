@@ -58,6 +58,16 @@ window.onload = async function (e) {
   let htmlBlocks = generateHTMLBlocks(SlidesArray);
   document.getElementById("first-swiper").innerHTML = htmlBlocks;
 
+  // // Получаем ссылку на кнопку
+  // const button = document.querySelector(".swiper-button-next2");
+
+  // // Создаем событие клика
+  // const clickEvent = new Event("click", { bubbles: true });
+
+  // // Диспетчеризируем событие
+  // button.dispatchEvent(clickEvent);
+
+  // document.querySelector(".swiper-button-next2").click();
   if (localStorage.getItem("dark")) {
     changeTeme();
     let arrSlides = document.querySelectorAll("background-color-slide");
@@ -106,6 +116,15 @@ window.onload = async function (e) {
   } else {
     console.log("Пользователя нет");
   }
+
+  // document.getElementById("blur-page").style.display = "none";
+  // Получаем ссылку на элемент, который нужно скрыть
+  const elementToFadeOut = document.getElementById("blur-page");
+
+  // Вызываем функцию fadeOut
+  fadeOut(elementToFadeOut, 250, () => {
+    console.log("Element has faded out!");
+  });
 };
 
 function goPage(number) {
@@ -156,6 +175,10 @@ const swiper = new Swiper(".img-slider", {
   centeredSlides: true,
   initialSlides: 1,
   loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next1",
+    prevEl: ".swiper-button-prev1",
+  },
 });
 
 const swiper2 = new Swiper(".swiper-second", {
@@ -167,8 +190,8 @@ const swiper2 = new Swiper(".swiper-second", {
   loop: true,
 
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next2",
+    prevEl: ".swiper-button-prev2",
   },
 
   slidesPerGroup: 3,
@@ -339,18 +362,6 @@ for (let anchor of anchors) {
   });
 }
 
-// обработка нажатия на карту
-let button_map = document.getElementById("map-button");
-button_map.onclick = function (e) {
-  let img = button_map.childNodes[1].src;
-  if (img == "http://127.0.0.1:52167/img/map-icon.png") {
-    button_map.childNodes[1].src = "http://127.0.0.1:52167/img/map-img2.png";
-  } else {
-    button_map.childNodes[1].src = "http://127.0.0.1:52167/img/map-icon.png";
-  }
-  console.log(button_map.childNodes[1].src);
-};
-
 function exit() {
   sessionStorage.removeItem("current-user");
   location.reload();
@@ -369,8 +380,41 @@ function deleteSectionForAdmin() {
   });
   document.querySelector(".main-container-first-icon-grid").style.display =
     "none";
-  document.getElementById("loop").style.display = "none";
+  document.querySelector(".loop").style.display = "none";
   document.querySelector(".lng-well-ask-you").style.display = "none";
   document.querySelector(".lng-your-selected").style.display = "none";
   document.querySelector(".lng-chat-with").style.display = "none";
+  document.getElementById("map-button").style.display = "none";
+  document.querySelector(".main-eight-container").style.display = "none";
+}
+
+document.querySelector(".lng-reset-options").onclick = function (e) {
+  let language = localStorage.getItem("language");
+  if (language != null) {
+    localStorage.setItem("language", "en");
+  }
+  let darkTheme = localStorage.getItem("dark");
+  if (darkTheme != null) {
+    localStorage.removeItem("dark");
+  }
+  location.reload();
+};
+
+function fadeOut(element, duration = 300, callback = null) {
+  const startOpacity = window
+    .getComputedStyle(element)
+    .getPropertyValue("opacity");
+  let currentOpacity = startOpacity;
+  const interval = setInterval(() => {
+    currentOpacity -= startOpacity / (duration / 16);
+    if (currentOpacity <= 0.05) {
+      element.style.display = "none";
+      clearInterval(interval);
+      if (typeof callback === "function") {
+        callback();
+      }
+    } else {
+      element.style.opacity = currentOpacity;
+    }
+  }, 16);
 }

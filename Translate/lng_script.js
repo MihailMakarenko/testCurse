@@ -974,9 +974,9 @@ const LanguagesArr = {
     ru: "Вы должны войти в систему перед добавлением их в корзину.",
     en: "You must be logged in before adding to cart.",
   },
-  "": {
-    ru: "",
-    en: "",
+  "reset-options": {
+    ru: "Сбросить настройки",
+    en: "Reset options",
   },
   "": {
     ru: "",
