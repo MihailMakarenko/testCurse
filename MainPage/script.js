@@ -3,7 +3,7 @@ if (sessionStorage.getItem("users") == null) {
 }
 let currentUser;
 function getUsers() {
-  fetch("/Registration/data.json")
+  fetch("Registration/data.json")
     .then((response) => response.json())
     .then((users) => {
       // console.log(users);
@@ -40,7 +40,7 @@ function translateArray() {
 async function getSlides() {
   let SlidesArray;
   try {
-    const response = await fetch("Review.json");
+    const response = await fetch("MainPage/Review.json");
     const slide = await response.json();
     SlidesArray = slide;
   } catch (error) {
@@ -161,7 +161,7 @@ function generateHTMLBlocks(dataArray) {
         </p>
       </div>
       <p id="lng-name-${data.id}" class="Zander lng-simon">${data.name}</p>
-      <img class="slide-circle" src="img/slide-circle.png" alt="" />
+      <img class="slide-circle" src="MainPage/img/slide-circle.png" alt="" />
     </div>
   </div>
     `;
