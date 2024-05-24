@@ -2,7 +2,7 @@ let PersonArray = [];
 let tableId = document.getElementById("myTable");
 
 window.onload = function (e) {
-  PersonArray = JSON.parse(sessionStorage.getItem("users"));
+  PersonArray = JSON.parse(localStorage.getItem("users"));
   console.log("srtrstrt");
   console.log(PersonArray);
   printUsers(arrayUsers);
@@ -74,7 +74,7 @@ function printUsers(users) {
 }
 
 window.onload = function () {
-  PersonArray = JSON.parse(sessionStorage.getItem("users"));
+  PersonArray = JSON.parse(localStorage.getItem("users"));
   console.log("srtrstrt");
   console.log(PersonArray);
   let htmlBlocks = generateHTMLBlocks(PersonArray);

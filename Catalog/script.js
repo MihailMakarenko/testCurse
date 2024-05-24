@@ -162,9 +162,9 @@ window.onload = async function (e) {
   replacementCountValue();
   addEventOnCard();
 
-  if (sessionStorage.getItem("current-user") != null) {
+  if (localStorage.getItem("current-user") != null) {
     console.log("Пользователь есть");
-    currentUser = JSON.parse(sessionStorage.getItem("current-user"));
+    currentUser = JSON.parse(localStorage.getItem("current-user"));
     document.getElementById("nickName-person").innerHTML = currentUser.nickname;
     document.getElementById("name-person").innerHTML = currentUser.firstName;
     document.getElementById("email-person").innerHTML = currentUser.email;
@@ -546,7 +546,7 @@ function goHome() {
 }
 
 function exit() {
-  sessionStorage.removeItem("current-user");
+  localStorage.removeItem("current-user");
   location.reload();
 }
 var modal = document.getElementById("message-user-not-defined");

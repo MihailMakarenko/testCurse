@@ -1,4 +1,4 @@
-if (sessionStorage.getItem("users") == null) {
+if (localStorage.getItem("users") == null) {
   let arrayUsers = getUsers();
 }
 let currentUser;
@@ -7,8 +7,8 @@ function getUsers() {
     .then((response) => response.json())
     .then((users) => {
       // console.log(users);
-      sessionStorage.setItem("users", JSON.stringify(users));
-      console.log(sessionStorage);
+      localStorage.setItem("users", JSON.stringify(users));
+      console.log(localStorage);
       return (usersArray = users);
     })
     .catch((error) => {
@@ -76,9 +76,9 @@ window.onload = async function (e) {
     });
   }
 
-  if (sessionStorage.getItem("current-user") != null) {
+  if (localStorage.getItem("current-user") != null) {
     console.log("Пользователь есть");
-    currentUser = JSON.parse(sessionStorage.getItem("current-user"));
+    currentUser = JSON.parse(localStorage.getItem("current-user"));
     document.getElementById("nickName-person").innerHTML =
       ": " + currentUser.nickname;
     document.getElementById("name-person").innerHTML =
@@ -129,7 +129,7 @@ window.onload = async function (e) {
 
 function goPage(number) {
   console.log("trtrtrrtrtr");
-  console.log(JSON.parse(sessionStorage.getItem("current-user")));
+  console.log(JSON.parse(localStorage.getItem("current-user")));
   if (currentUser != null && currentUser.isAdmin == true) {
     if (number == 0) {
       window.location.href = "PageWorkers.html";
@@ -363,7 +363,7 @@ for (let anchor of anchors) {
 }
 
 function exit() {
-  sessionStorage.removeItem("current-user");
+  localStorage.removeItem("current-user");
   location.reload();
 }
 

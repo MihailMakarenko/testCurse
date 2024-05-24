@@ -20,8 +20,8 @@ function getUsers() {
     .then((response) => response.json())
     .then((users) => {
       // console.log(users);
-      sessionStorage.setItem("users", JSON.stringify(users));
-      console.log(sessionStorage);
+      localStorage.setItem("users", JSON.stringify(users));
+      console.log(localStorage);
       return (usersArray = users);
       // console.log(usersArray.length);
     })
@@ -30,10 +30,10 @@ function getUsers() {
     });
 }
 window.onload = function (e) {
-  if (sessionStorage.getItem("users") == undefined) {
+  if (localStorage.getItem("users") == undefined) {
     getUsers();
   } else {
-    usersArray = JSON.parse(sessionStorage.getItem("users"));
+    usersArray = JSON.parse(localStorage.getItem("users"));
   }
 };
 
@@ -511,14 +511,14 @@ buttonRegistration.onclick = function (e) {
     console.log("Все ок");
     document.getElementById("finish-modal").style.display = "block";
     document.querySelector("body").classList.add("bodyOverflow");
-    sessionStorage.setItem("users", JSON.stringify(usersArray));
+    localStorage.setItem("users", JSON.stringify(usersArray));
   }
   console.log(usersArray.length + " users");
 };
 
 document.getElementById("button-continue").onclick = function (e) {
-  sessionStorage.setItem("current-user", JSON.stringify(Person));
-  console.log(sessionStorage);
+  localStorage.setItem("current-user", JSON.stringify(Person));
+  console.log(localStorage);
   window.location.href = "index.html";
 };
 

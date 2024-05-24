@@ -6,10 +6,10 @@ let login = document.getElementById("login");
 let password = document.getElementById("password");
 
 document.getElementById("logIn").onclick = function (e) {
-  console.log(JSON.parse(sessionStorage.getItem("users")));
+  console.log(JSON.parse(localStorage.getItem("users")));
   let userArray = [];
   let isSearchUser = false;
-  userArray = JSON.parse(sessionStorage.getItem("users"));
+  userArray = JSON.parse(localStorage.getItem("users"));
   if (userArray != null && userArray.length == 0) {
     userArray = arrayUsers;
   } else {
@@ -29,7 +29,7 @@ document.getElementById("logIn").onclick = function (e) {
               document.referrer.substring(23, document.referrer.length) ==
               "Autorization.html"
             ) {
-              sessionStorage.setItem(
+              localStorage.setItem(
                 "current-user",
                 JSON.stringify(
                   userArray[
@@ -45,7 +45,7 @@ document.getElementById("logIn").onclick = function (e) {
               );
               window.location.href = "index.html";
             } else {
-              sessionStorage.setItem(
+              localStorage.setItem(
                 "current-user",
                 JSON.stringify(
                   userArray[
@@ -61,8 +61,6 @@ document.getElementById("logIn").onclick = function (e) {
               );
               history.back();
             }
-
-            // sessionStorage.setItem("current-user");
           } else {
             window.location.href = "index.html";
           }
