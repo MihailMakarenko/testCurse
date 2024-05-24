@@ -5,7 +5,7 @@
     "discription": "6 таблеток, 250мг",
     "price": "10",
     "type": "Таблетки",
-    "img_path": "img-medicines/eight-medicamets.png"
+    "img_path": "Catalog/img-medicines/eight-medicamets.png"
   },
   {
     "idItem": "item2",
@@ -13,7 +13,7 @@
     "discription": "6 капсул, 250мг",
     "price": "12",
     "type": "Таблетки",
-    "img_path": "img-medicines/eleven-medicaments.png"
+    "img_path": "Catalog/img-medicines/eleven-medicaments.png"
   },
   {
     "idItem": "item3",
@@ -21,7 +21,7 @@
     "discription": "лечение грибка, 10мг",
     "price": "15",
     "type": "Мазь",
-    "img_path": "img-medicines/fifteen.png"
+    "img_path": "Catalog/img-medicines/fifteen.png"
   },
   {
     "idItem": "item4",
