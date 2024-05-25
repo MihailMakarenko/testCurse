@@ -153,7 +153,11 @@ window.onload = async function (e) {
   TranslateElement();
   if (
     localStorage.getItem("cards") == null ||
-    localStorage.getItem("cards").length == 0
+    localStorage.getItem("cards").length == 0 ||
+    localStorage.getItem("cards") == "[]" ||
+    localStorage.getItem("cards") == "null" ||
+    localStorage.getItem("cards") == "undefined" ||
+    localStorage.getItem("cards") == ""
   ) {
     CardArray = await getCards();
     localStorage.setItem("cards", JSON.stringify(CardArray));
