@@ -123,6 +123,7 @@ function goHome() {
 
 function back() {
   window.history.back();
+ location.reload();
 }
 
 function TranslateElement() {
