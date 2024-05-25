@@ -151,7 +151,10 @@ let currentUser;
 let parentElement = document.getElementById("card-flex-conainer");
 window.onload = async function (e) {
   TranslateElement();
-  if (localStorage.getItem("cards") == null) {
+  if (
+    localStorage.getItem("cards") == null ||
+    localStorage.getItem("cards").length == 0
+  ) {
     CardArray = await getCards();
     localStorage.setItem("cards", JSON.stringify(CardArray));
     console.log(localStorage.getItem("cards"));
