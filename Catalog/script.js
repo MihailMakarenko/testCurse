@@ -20,6 +20,7 @@ async function getCards() {
   try {
     const response = await fetch("Catalog/medicines.json");
     const card = await response.json();
+    console.log(card);
     CardArray = card;
   } catch (error) {
     console.error("Ошибка при получениипользователей", error);
@@ -42,6 +43,7 @@ function generateHTMLBlocks(dataArray) {
   }
   let htmlBlocks = "";
   let count = 0;
+  console.log(dataArray);
   dataArray.forEach((data) => {
     count++;
     htmlBlocks += `
@@ -150,11 +152,13 @@ let parentElement = document.getElementById("card-flex-conainer");
 window.onload = async function (e) {
   TranslateElement();
   if (localStorage.getItem("cards") == null) {
-    localStorage.setItem("cards", JSON.stringify(CardArray));
     CardArray = await getCards();
+    localStorage.setItem("cards", JSON.stringify(CardArray));
+    console.log(localStorage.getItem("cards"));
   } else {
     CardArray = JSON.parse(localStorage.getItem("cards"));
   }
+  console.log(CardArray);
   translateCard();
   currentArray = CardArray;
   pagesArray = getAllArrayInEveryPage(CardArray);
