@@ -28,6 +28,7 @@ async function getCards() {
 }
 
 function generateHTMLBlocks(dataArray) {
+  console.log(dataArray);
   let promotion = "Акция";
   let basket = "В корзину";
   let cancel = "Отмена";
